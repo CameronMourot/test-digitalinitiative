@@ -2041,29 +2041,29 @@ fieldset:disabled a.btn {
 
 .btn-secondary {
   color: #fff;
-  background-color: #288AC1;
-  border-color: #288AC1;
+  background-color: #d30001;
+  border-color: #d30001;
 }
 .btn-secondary:hover {
   color: #fff;
-  background-color: #2173a1;
-  border-color: #1f6c97;
+  background-color: #ad0001;
+  border-color: #a00001;
 }
 .btn-secondary:focus, .btn-secondary.focus {
-  box-shadow: 0 0 0 0.2rem rgba(72, 156, 202, 0.5);
+  box-shadow: 0 0 0 0.2rem rgba(218, 38, 39, 0.5);
 }
 .btn-secondary.disabled, .btn-secondary:disabled {
   color: #fff;
-  background-color: #288AC1;
-  border-color: #288AC1;
+  background-color: #d30001;
+  border-color: #d30001;
 }
 .btn-secondary:not(:disabled):not(.disabled):active, .btn-secondary:not(:disabled):not(.disabled).active, .show > .btn-secondary.dropdown-toggle {
   color: #fff;
-  background-color: #1f6c97;
-  border-color: #1d648c;
+  background-color: #a00001;
+  border-color: #930001;
 }
 .btn-secondary:not(:disabled):not(.disabled):active:focus, .btn-secondary:not(:disabled):not(.disabled).active:focus, .show > .btn-secondary.dropdown-toggle:focus {
-  box-shadow: 0 0 0 0.2rem rgba(72, 156, 202, 0.5);
+  box-shadow: 0 0 0 0.2rem rgba(218, 38, 39, 0.5);
 }
 
 .btn-success {
@@ -2254,28 +2254,28 @@ fieldset:disabled a.btn {
 }
 
 .btn-outline-secondary {
-  color: #288AC1;
-  border-color: #288AC1;
+  color: #d30001;
+  border-color: #d30001;
 }
 .btn-outline-secondary:hover {
   color: #fff;
-  background-color: #288AC1;
-  border-color: #288AC1;
+  background-color: #d30001;
+  border-color: #d30001;
 }
 .btn-outline-secondary:focus, .btn-outline-secondary.focus {
-  box-shadow: 0 0 0 0.2rem rgba(40, 138, 193, 0.5);
+  box-shadow: 0 0 0 0.2rem rgba(211, 0, 1, 0.5);
 }
 .btn-outline-secondary.disabled, .btn-outline-secondary:disabled {
-  color: #288AC1;
+  color: #d30001;
   background-color: transparent;
 }
 .btn-outline-secondary:not(:disabled):not(.disabled):active, .btn-outline-secondary:not(:disabled):not(.disabled).active, .show > .btn-outline-secondary.dropdown-toggle {
   color: #fff;
-  background-color: #288AC1;
-  border-color: #288AC1;
+  background-color: #d30001;
+  border-color: #d30001;
 }
 .btn-outline-secondary:not(:disabled):not(.disabled):active:focus, .btn-outline-secondary:not(:disabled):not(.disabled).active:focus, .show > .btn-outline-secondary.dropdown-toggle:focus {
-  box-shadow: 0 0 0 0.2rem rgba(40, 138, 193, 0.5);
+  box-shadow: 0 0 0 0.2rem rgba(211, 0, 1, 0.5);
 }
 
 .btn-outline-success {
@@ -4165,15 +4165,15 @@ input[type=button].btn-block {
 }
 
 .alert-secondary {
-  color: #154864;
-  background-color: #d4e8f3;
-  border-color: #c3deee;
+  color: #6e0001;
+  background-color: #f6cccc;
+  border-color: #f3b8b8;
 }
 .alert-secondary hr {
-  border-top-color: #afd3e8;
+  border-top-color: #efa2a2;
 }
 .alert-secondary .alert-link {
-  color: #0c2a3a;
+  color: #3b0001;
 }
 
 .alert-success {
@@ -4320,13 +4320,13 @@ button.bg-primary:focus {
 }
 
 .bg-secondary {
-  background-color: #288AC1 !important;
+  background-color: #d30001 !important;
 }
 
 a.bg-secondary:hover, a.bg-secondary:focus,
 button.bg-secondary:hover,
 button.bg-secondary:focus {
-  background-color: #1f6c97 !important;
+  background-color: #a00001 !important;
 }
 
 .bg-success {
@@ -4442,7 +4442,7 @@ button.bg-dark:focus {
 }
 
 .border-secondary {
-  border-color: #288AC1 !important;
+  border-color: #d30001 !important;
 }
 
 .border-success {
@@ -7996,11 +7996,11 @@ a.text-primary:hover, a.text-primary:focus {
 }
 
 .text-secondary {
-  color: #288AC1 !important;
+  color: #d30001 !important;
 }
 
 a.text-secondary:hover, a.text-secondary:focus {
-  color: #1b5d82 !important;
+  color: #870001 !important;
 }
 
 .text-success {
@@ -8466,6 +8466,17 @@ body {
 #header-homepage .icon-volume-medium:before {
   content: "";
 }
+#header-homepage .connection-btn a:hover {
+  text-decoration: none;
+}
+#header-homepage .connection-btn span {
+  height: 128px;
+  line-height: 128px;
+  width: 270px;
+  text-align: center;
+  background-color: #d30001;
+  color: #fff;
+}
 
 /* * {
     font-family: $font-family-fertigo;
@@ -8477,7 +8488,7 @@ body {
 
 section.first-page {
   background-image: url(../img/Section1-image1.jpg);
-  background-image: linear-gradient(transparent, #008791), url(../img/Section1-image1.jpg);
+  background-image: linear-gradient(transparent 45%, #008791), url(../img/Section1-image1.jpg);
 }
 
 section.second-page {

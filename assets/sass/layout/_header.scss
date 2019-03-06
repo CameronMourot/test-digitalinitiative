@@ -29,6 +29,19 @@
             content: "\e984";
         }
     }
+    .connection-btn {
+        a:hover {
+            text-decoration: none;
+        }
+        span {
+            height: 128px;
+            line-height: 128px;
+            width: 270px;
+            text-align: center;
+            background-color: $secondary;
+            color: #fff;
+        }
+    }
 }
 
 //TEST
