@@ -1,0 +1,34 @@
+html {
+    @include ax_responsive(font-size, $font-size-base - 0.15rem, $font-size-base - 0.1rem, $font-size-base - 0.05rem, $font-size-base);
+}
+
+body {
+    cursor: default;
+    font-size: inherit;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+// text selection
+::selection {
+    background: $gray-600;
+    color: #FFF;
+}
+
+::-moz-selection {
+    background: $gray-600;
+    color: #FFF;
+}
+
+.title {
+    text-transform: uppercase;
+    &.t-medium {
+        font-family: $font-family-robotomedium;
+    }
+    &.t-regular {
+        font-family: $font-family-robotoregular;
+    }
+    &.t-thin {
+        font-family: $font-family-robotothin;
+    }
+}

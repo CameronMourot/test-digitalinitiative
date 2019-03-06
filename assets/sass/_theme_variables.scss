@@ -1,5 +1,5 @@
-
 /* GRID ---------- */
+
 //$grid-gutter-width: 30px;
 //
 //$grid-breakpoints: (
@@ -17,9 +17,9 @@
 //        xl: 1140px + $grid-gutter-width
 //);
 
-
 /* COLORS ---------- */
-$white:    #fff;
+
+$white: #fff;
 $gray-100: #f6f5f5;
 $gray-200: #dddddd;
 $gray-300: #dee2e6;
@@ -29,106 +29,108 @@ $gray-600: #6c757d;
 $gray-700: #555656;
 $gray-800: #444444;
 $gray-900: #222222;
-$black:    #000;
-
-$blue:    #288AC1;
-$indigo:  #6610f2;
-$purple:  #6f42c1;
-$pink:    #e83e8c;
-$red:     #dc3545;
-$orange:  #F06544;
-$yellow:  #ffc107;
-$green:   #28a745;
-$teal:    #20c997;
-$cyan:    #17a2b8;
-
+$black: #000;
+$blue: #288AC1;
+$indigo: #6610f2;
+$purple: #6f42c1;
+$pink: #e83e8c;
+$red: #dc3545;
+$orange: #F06544;
+$yellow: #ffc107;
+$green: #28a745;
+$teal: #20c997;
+$cyan: #17a2b8;
 // Primary colors
-$primary:       #555656;
-$secondary:     #288AC1;
-
-$success:       $green;
-$info:          $cyan;
-$warning:       $yellow;
-$danger:        $red;
-$light:         $gray-100;
-$dark:          $black;
-
-$body-bg:                   $white;
-$body-color:                $gray-700;
-$border-color:              $gray-200;
-$headings-color: 			$gray-700;
-$input-placeholder-color:   $body-color;
-
+$primary: #555656;
+$secondary: #288AC1;
+$success: $green;
+$info: $cyan;
+$warning: $yellow;
+$danger: $red;
+$light: $gray-100;
+$dark: $black;
+$body-bg: $white;
+$body-color: $gray-700;
+$border-color: $gray-200;
+$headings-color: $gray-700;
+$input-placeholder-color: $body-color;
 $link-color: $primary;
 $link-hover-color: darken($link-color, 15%);
 
-
 /* LINE HEIGHT ---------- */
+
 $line-height-base: 1.6;
 
-
 /* FONTS ---------- */
-//$font-family-sans-serif: 	'Open Sans', sans-serif;
-//$headings-font-family:      'Oswald', sans-serif;
+
+$font-family-allerbd: 'Aller-Bold',
+'Arial',
+'sans-serif';
+$font-family-fertigo: 'FertigoPro-Regular',
+'Arial',
+'sans-serif';
+$font-family-icomoon: 'IcoMoon-Ultimate',
+'Arial',
+'sans-serif';
+$font-family-myriad: 'MyriadPro-Regular',
+'Arial',
+'sans-serif';
+$font-family-robotolight: 'Roboto-Light',
+'Arial',
+'sans-serif';
+$font-family-robotomedium: 'Roboto-Medium',
+'Arial',
+'sans-serif';
+$font-family-robotoregular: 'Roboto-Regular',
+'Arial',
+'sans-serif';
+$font-family-robotothin: 'Roboto-Thin',
+'Arial',
+'sans-serif';
+$font-family-sans-serif: $font-family-robotoregular;
+$headings-font-family: $font-family-robotothin;
 //$font-family-custom:        'HaveHeartTwo', sans-serif;
-//$font-family-base:          $font-family-sans-serif;
-
-$font-family-allerbd:       'Aller-Bold', 'Arial', 'sans-serif';
-$font-family-fertigo:       'FertigoPro-Regular', 'Arial', 'sans-serif';
-$font-family-icomoon:       'IcoMoon-Ultimate', 'Arial', 'sans-serif';
-$font-family-myriad:        'MyriadPro-Regular', 'Arial', 'sans-serif';
-$font-family-robotolight:   'Roboto-Light', 'Arial', 'sans-serif';
-$font-family-robotomedium:  'Roboto-Medium', 'Arial', 'sans-serif';
-$font-family-robotoregular: 'Roboto-Regular', 'Arial', 'sans-serif';
-$font-family-robotothin:    'Roboto-Thin', 'Arial', 'sans-serif';
-
-
+$font-family-base: $font-family-sans-serif;
 
 /* FONT WEIGHT ---------- */
 
-$font-weight-light:       300;
-$font-weight-normal:      400;
-$font-weight-medium:      500;
-$font-weight-semibold:    600;
-$font-weight-bold:        700;
-$font-weight-extra-bold:  800;
-
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+$font-weight-extra-bold: 800;
 $headings-font-weight: $font-weight-light;
 
-
 /* FONT SIZE ---------- */
-$font-size-extra-large:  1.125rem; // 18px
-$font-size-large: 	 1rem; // 16px
-$font-size-base: 0.875rem; // 14px
-$font-size-small: 	 0.8125rem; // 12px
-$font-size-extra-small: 	 0.625rem; // 10px
 
-$big-size: 12.5rem; // 200px
-$h1-font-size: 2.68rem; // 43px
-$h2-font-size: 2.125rem; // 34px
-$h3-font-size: 1.625rem; // 26px
-$h4-font-size: 1.25rem; // 20px
-$h5-font-size: 1rem; // 16px
-$h6-font-size: 1rem; // 16px
-
+$font-size-base: 1rem; // Assumes the browser default, typically `16px`
+$font-size-lg: ($font-size-base * 1.25);
+$font-size-sm: ($font-size-base * .875);
+$h1-font-size: $font-size-base * 2.5;
+$h2-font-size: $font-size-base * 2;
+$h3-font-size: $font-size-base * 1.75;
+$h4-font-size: $font-size-base * 1.5;
+$h5-font-size: $font-size-base * 1.25;
+$h6-font-size: $font-size-base;
 
 /* CUSTOMS ---------- */
-$border-radius:               .25rem;
-$border-radius-lg:            .3rem ;
-$border-radius-sm:            .2rem ;
 
-$transition-base:             all .3s ease-in-out;
-
+$border-radius: .25rem;
+$border-radius-lg: .3rem;
+$border-radius-sm: .2rem;
+$transition-base: all .3s ease-in-out;
 
 /* SOCIAL COLORS ---------- */
-$facebook:   #3d5c9a;
-$twitter:    #55acee;
-$google:	 #4285f4;
-$amazon: 	 #ff9900;
+
+$facebook: #3d5c9a;
+$twitter: #55acee;
+$google: #4285f4;
+$amazon: #ff9900;
 $googleplus: #dd4b39;
 $pinteresty: #cd1d1f;
-$youtube:    #cc181e;
-$instagram:  #3f729b;
-$tumblr:     #35465d;
-$vimeo:      #1ab7ea;
-$vine:       #00B489;
+$youtube: #cc181e;
+$instagram: #3f729b;
+$tumblr: #35465d;
+$vimeo: #1ab7ea;
+$vine: #00B489;
