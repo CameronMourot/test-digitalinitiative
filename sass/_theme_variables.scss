@@ -68,10 +68,20 @@ $line-height-base: 1.6;
 
 
 /* FONTS ---------- */
-$font-family-sans-serif: 	'Open Sans', sans-serif;
-$headings-font-family:      'Oswald', sans-serif;
-$font-family-custom:        'HaveHeartTwo', sans-serif;
-$font-family-base:          $font-family-sans-serif;
+//$font-family-sans-serif: 	'Open Sans', sans-serif;
+//$headings-font-family:      'Oswald', sans-serif;
+//$font-family-custom:        'HaveHeartTwo', sans-serif;
+//$font-family-base:          $font-family-sans-serif;
+
+$font-family-allerbd:       'Aller-Bold', 'Arial', 'sans-serif';
+$font-family-fertigo:       'FertigoPro-Regular', 'Arial', 'sans-serif';
+$font-family-icomoon:       'IcoMoon-Ultimate', 'Arial', 'sans-serif';
+$font-family-myriad:        'MyriadPro-Regular', 'Arial', 'sans-serif';
+$font-family-robotolight:   'Roboto-Light', 'Arial', 'sans-serif';
+$font-family-robotomedium:  'Roboto-Medium', 'Arial', 'sans-serif';
+$font-family-robotoregular: 'Roboto-Regular', 'Arial', 'sans-serif';
+$font-family-robotothin:    'Roboto-Thin', 'Arial', 'sans-serif';
+
 
 
 /* FONT WEIGHT ---------- */
@@ -79,6 +89,7 @@ $font-family-base:          $font-family-sans-serif;
 $font-weight-light:       300;
 $font-weight-normal:      400;
 $font-weight-medium:      500;
+$font-weight-semibold:    600;
 $font-weight-bold:        700;
 $font-weight-extra-bold:  800;
 

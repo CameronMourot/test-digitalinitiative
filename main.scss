@@ -1,9 +1,10 @@
+@import "sass/components/fonts";
 @import "sass/theme_variables";
 @import "sass/mixins";
 @import "node_modules/bootstrap/scss/functions";
 @import "node_modules/bootstrap/scss/variables";
 @import "node_modules/bootstrap/scss/mixins";
-@import "node_modules/bootstrap/scss/root";
+//@import "node_modules/bootstrap/scss/root";
 @import "node_modules/bootstrap/scss/reboot";
 @import "node_modules/bootstrap/scss/type";
 @import "node_modules/bootstrap/scss/images";
@@ -37,7 +38,7 @@
 //@import "node_modules/bootstrap/scss/spinners";
 @import "node_modules/bootstrap/scss/utilities";
 @import "node_modules/bootstrap/scss/print";
-// Custom sass imports 
+// Custom sass imports
 @import "sass/components/typography";
 @import "sass/home";
 @import "sass/layout/footer";
