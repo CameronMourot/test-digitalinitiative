@@ -1,4 +1,35 @@
-#header {}
+#header-homepage {
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    .brand {
+        svg {
+            width: 250px;
+            height: 48px;
+        }
+    }
+    [class*="icon-"] {
+        font-family: $font-family-icomoon;
+        color: #fff;
+    }
+    .icon-warning {
+        &:before {
+            content: "\e983";
+        }
+    }
+    .icon-search {
+        &:before {
+            content: "\e987";
+        }
+    }
+    .icon-volume-medium {
+        &:before {
+            content: "\e984";
+        }
+    }
+}
 
 //TEST
 

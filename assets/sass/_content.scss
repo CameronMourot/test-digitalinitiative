@@ -32,3 +32,9 @@ body {
         font-family: $font-family-robotothin;
     }
 }
+
+.has-bg {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}

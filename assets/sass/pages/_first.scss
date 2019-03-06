@@ -1,0 +1,4 @@
+section.first-page {
+    background-image: url(../img/Section1-image1.jpg); // Fallback
+    background-image: linear-gradient(transparent, $primary), url(../img/Section1-image1.jpg);
+}
