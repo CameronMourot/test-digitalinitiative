@@ -16,13 +16,13 @@ $(document).ready(function() {
         direction: "vertical" // You can now define the direction of the One Page Scroll animation. Options available are "vertical" and "horizontal". The default value is "vertical".  
     });
 
-    $("#my-menu").mmenu({
-        // slidingSubmenus: false
-    }, {
-        // configuration
-        offCanvas: {
-            pageNodetype: "main"
-        }
-    });
+    var classes = ['bg-1', 'bg-2', 'bg-3'];
+    var i = 1;
+    var minus = 0;
+    $('.first-page').addClass('bg-1');
+    setInterval(function() {
+        $('.first-page').addClass(classes[i++ % classes.length]);
+        $('.first-page').removeClass(classes[minus++ % classes.length]);
+    }, 5000);
 });
-console.log('fef');
+console.log('working-js');

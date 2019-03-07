@@ -1,4 +1,30 @@
 section.first-page {
-    background-image: url(../img/Section1-image1.jpg); // Fallback
-    background-image: linear-gradient(transparent 45%, $primary), url(../img/Section1-image1.jpg);
+    &.bg-1 {
+        background-image: linear-gradient(rgba(0, 0, 0, .25) 45%, $primary), url(../img/Section1-image1.jpg);
+    }
+    &.bg-2 {
+        background-image: linear-gradient(rgba(0, 0, 0, .25) 45%, $primary), url(../img/Section1-image2.jpg);
+    }
+    &.bg-3 {
+        background-image: linear-gradient(rgba(0, 0, 0, .25) 45%, $primary), url(../img/Section1-image3.jpg);
+    }
+    #first-page-intro {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        padding: 0 5em 8.5em;
+        text-align: center;
+        >h1,
+        p {
+            color: #fff;
+        }
+        h1 {
+            font-size: rem(48);
+            line-height: $line-height-sm;
+        }
+        p {
+            font-family: $font-family-robotolight;
+            font-size: rem(36);
+        }
+    }
 }

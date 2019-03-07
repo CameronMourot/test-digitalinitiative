@@ -1,4 +1,3 @@
-
 //	Mixin from Axome (https://www.axome.com/)
 //	Responsive everything
 //	ex :
@@ -7,50 +6,59 @@
 //	}
 //  xs, lg and xl are optional.
 @mixin ax_responsive($prop, $xs, $sm, $md, $lg: false, $xl: false) {
+    @if $xs {
+        @include media-breakpoint-only(xs) {
+            #{$prop}: $xs;
+        }
+        @include media-breakpoint-only(sm) {
+            #{$prop}: $sm;
+        }
+    }
+    @else {
+        @include media-breakpoint-down(sm) {
+            #{$prop}: $sm;
+        }
+    }
+    @if $lg and $xl {
+        @include media-breakpoint-only(md) {
+            #{$prop}: $md;
+        }
+        @include media-breakpoint-only(lg) {
+            #{$prop}: $lg;
+        }
+        @include media-breakpoint-up(xl) {
+            #{$prop}: $xl;
+        }
+    }
+    @if $lg and not($xl) {
+        @include media-breakpoint-only(md) {
+            #{$prop}: $md;
+        }
+        @include media-breakpoint-up(lg) {
+            #{$prop}: $lg;
+        }
+    }
+    @if not($lg) and $xl {
+        @include media-breakpoint-only(md) {
+            #{$prop}: $md;
+        }
+        @include media-breakpoint-up(xl) {
+            #{$prop}: $xl;
+        }
+    }
+    @if not($lg) and not($xl) {
+        @include media-breakpoint-up(md) {
+            #{$prop}: $md;
+        }
+    }
+}
 
-	@if $xs {
-		@include media-breakpoint-only(xs) {
-			#{$prop}: $xs;
-		}
-		@include media-breakpoint-only(sm) {
-			#{$prop}: $sm;
-		}
-	} @else {
-		@include media-breakpoint-down(sm) {
-			#{$prop}: $sm;
-		}
-	}
-
-	@if $lg and $xl {
-		@include media-breakpoint-only(md) {
-			#{$prop}: $md;
-		}
-		@include media-breakpoint-only(lg) {
-			#{$prop}: $lg;
-		}
-		@include media-breakpoint-up(xl) {
-			#{$prop}: $xl;
-		}
-	}
-	@if $lg and not($xl) {
-		@include media-breakpoint-only(md) {
-			#{$prop}: $md;
-		}
-		@include media-breakpoint-up(lg) {
-			#{$prop}: $lg;
-		}
-	}
-	@if not($lg) and $xl {
-		@include media-breakpoint-only(md) {
-			#{$prop}: $md;
-		}
-		@include media-breakpoint-up(xl) {
-			#{$prop}: $xl;
-		}
-	}
-	@if not($lg) and not($xl) {
-		@include media-breakpoint-up(md) {
-			#{$prop}: $md;
-		}
-	}
+@function rem($pixels, $context: 16px) {
+    @if (unitless($pixels)) {
+        $pixels: $pixels * 1px;
+    }
+    @if (unitless($context)) {
+        $context: $context * 1px;
+    }
+    @return $pixels / $context * 1rem;
 }

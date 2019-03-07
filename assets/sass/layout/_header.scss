@@ -6,14 +6,21 @@
     left: 0;
     .brand {
         svg {
-            width: 250px;
-            height: 48px;
+            width: 189px;
+            height: 34px;
+        }
+    }
+    >div:nth-child(2) {
+        >div {
+            display: flex;
+            align-items: center;
         }
     }
     [class*="icon-"] {
         font-family: $font-family-icomoon;
         color: #fff;
-        //font-size: 22px;
+        font-size: $font-size-xlg;
+        padding: 0 15px;
     }
     .icon-warning2 {
         &:before {
@@ -30,21 +37,35 @@
             content: "\ed8d";
         }
     }
+    .language-selector {
+        padding: 0 25px 0 15px;
+        .dropdown-toggle {
+            color: #fff;
+            font-size: $font-size-lg;
+            &:after {
+                border-top: 0.2em solid;
+                border-right: 0.2em solid transparent;
+                border-left: 0.2em solid transparent;
+                border-bottom: 0;
+            }
+        }
+    }
     .connection-btn {
         a:hover {
             text-decoration: none;
         }
         span {
-            height: 128px;
-            line-height: 128px;
-            width: 270px;
+            height: 96px;
+            line-height: 96px;
+            width: 205px;
             text-align: center;
             background-color: $secondary;
             color: #fff;
         }
     }
     .menu-burger {
-
+        background-color: #fff;
+        width: 60px;
     }
 }
 
