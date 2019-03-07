@@ -15,5 +15,14 @@ $(document).ready(function() {
         // the browser's width is less than 600, the fallback will kick in.
         direction: "vertical" // You can now define the direction of the One Page Scroll animation. Options available are "vertical" and "horizontal". The default value is "vertical".  
     });
+
+    $("#my-menu").mmenu({
+        // slidingSubmenus: false
+    }, {
+        // configuration
+        offCanvas: {
+            pageNodetype: "main"
+        }
+    });
 });
 console.log('fef');

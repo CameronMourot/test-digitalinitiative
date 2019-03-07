@@ -13,20 +13,21 @@
     [class*="icon-"] {
         font-family: $font-family-icomoon;
         color: #fff;
+        //font-size: 22px;
     }
-    .icon-warning {
+    .icon-warning2 {
         &:before {
-            content: "\e983";
+            content: "\ed4d";
         }
     }
     .icon-search {
         &:before {
-            content: "\e987";
+            content: "\eb33";
         }
     }
     .icon-volume-medium {
         &:before {
-            content: "\e984";
+            content: "\ed8d";
         }
     }
     .connection-btn {
@@ -41,6 +42,9 @@
             background-color: $secondary;
             color: #fff;
         }
+    }
+    .menu-burger {
+
     }
 }
 
