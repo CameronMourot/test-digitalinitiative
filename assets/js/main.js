@@ -24,5 +24,21 @@ $(document).ready(function() {
         $('.first-page').addClass(classes[i++ % classes.length]);
         $('.first-page').removeClass(classes[minus++ % classes.length]);
     }, 5000);
+
+    $("#burger").click(function check() {
+        $(this).toggleClass("burgeractive");
+    });
+
+    var $button = $('.menu-opener');
+    var $overlay = $('#overlay-navigation');
+
+    $button.on('click', function() {
+        $overlay.show(500);
+    });
+
+    $('#overlay-navigation .menu-closer').on('click', function() {
+        $overlay.hide(300);
+    });
+
 });
 console.log('working-js');

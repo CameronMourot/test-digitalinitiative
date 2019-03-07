@@ -26,5 +26,32 @@ section.first-page {
             font-family: $font-family-robotolight;
             font-size: rem(36);
         }
+        &:before {
+            content: '';
+            position: absolute;
+            top: -170px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 157px;
+            height: 111px;
+            background: url(../img/svg/myhealth-w.svg) no-repeat center;
+            background-size: contain;
+        }
+        .scroll-down-icon {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            padding-bottom: 5em;
+            #animated-path {
+                animation: uppath 1s infinite alternate;
+            }
+            @keyframes uppath {
+                100% {
+                    transform: translateY(10px);
+                }
+            }
+        }
     }
 }

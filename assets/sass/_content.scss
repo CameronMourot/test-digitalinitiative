@@ -38,3 +38,19 @@ body {
     background-position: center;
     background-size: cover;
 }
+
+#overlay-navigation {
+    width: 100% !important;
+    height: 100vh !important;
+    z-index: 9999;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba($primary, .9);
+}
