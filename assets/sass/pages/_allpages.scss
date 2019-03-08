@@ -1,0 +1,5 @@
+#main>section {
+    &:not(:nth-child(-n+2)) {
+        padding-top: $head-height;
+    }
+}
