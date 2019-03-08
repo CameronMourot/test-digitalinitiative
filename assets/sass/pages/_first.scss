@@ -1,8 +1,6 @@
 section.first-page {
     background-color: #000;
-    .bg-1,
-    .bg-2,
-    .bg-3 {
+    > [class*="bg-"] {
         opacity: 0;
         transition: 0.8s opacity ease;
         position: absolute;
@@ -11,7 +9,9 @@ section.first-page {
         left: 0;
         bottom: 0;
         img {
-            width: 100%;
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover;
         }
         &:before {
             content: '';
@@ -24,17 +24,17 @@ section.first-page {
         }
     }
     &.bg-1 {
-        > .bg-1 {
+        > .bg-one {
             opacity: 1;
         }
     }
     &.bg-2 {
-        > .bg-2 {
+        > .bg-two {
             opacity: 1;
         }
     }
     &.bg-3 {
-        > .bg-3 {
+        > .bg-three {
             opacity: 1;
         }
     }
@@ -81,6 +81,7 @@ section.first-page {
             @keyframes uppath {
                 100% {
                     transform: translateY(10px);
+                    opacity: .2;
                 }
             }
         }

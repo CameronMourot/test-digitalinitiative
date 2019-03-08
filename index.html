@@ -8,13 +8,14 @@
     <title>Test développeur front-end - Digital Initiative</title>
     <link rel="stylesheet" href="assets/css/main.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="assets/js/imagesloaded.pkgd.min.js"></script>
     <script src="assets/js/jquery.onepage-scroll.min.js"></script>
     <script src="assets/js/main.js"></script>
 </head>
 
 <body>
 
-    <header id="header" class="header-fixed" style="height: 0;">
+    <header id="header" class="header-fixed">
         <div>ddd</div>
         <div>ddd</div>
         <div>ddd</div>
@@ -23,9 +24,9 @@
 
     <main id="main">
         <section class="onepage-element first-page has-bg">
-            <div class="bg-1"><img src="assets/img/Section1-image1.jpg" alt=""></div>
-            <div class="bg-2"><img src="assets/img/Section1-image2.jpg" alt=""></div>
-            <div class="bg-3"><img src="assets/img/Section1-image3.jpg" alt=""></div>
+            <div class="bg-one"><img src="assets/img/Section1-image1.jpg" alt=""></div>
+            <div class="bg-two"><img src="assets/img/Section1-image2.jpg" alt=""></div>
+            <div class="bg-three"><img src="assets/img/Section1-image3.jpg" alt=""></div>
             <header id="header-homepage" class="d-flex align-items-center justify-content-between">
                 <div class="pl-4">
                     <a class="brand" href="#">
@@ -80,7 +81,7 @@
                         </a>
                     </div>
                     <div class="menu-burger">
-                        <div id="burger" class="menu-opener">
+                        <div id="burger" class="btn-burger menu-opener">
                             <i></i>
                         </div>
                     </div>
@@ -111,9 +112,16 @@
     </main>
 
     <div id="overlay-navigation" style="display: none">
-        <div>ee</div>
-        <div>zz</div>
-        <div>dd</div>
+        <div class="btn-burger burgeractive menu-closer">
+            <i></i>
+        </div>
+        <div id="contain-menu-items">
+            <div>Menu item</div>
+            <div>Menu item</div>
+            <div>Menu item</div>
+            <div>Menu item</div>
+            <div>Menu item</div>
+        </div>
     </div>
 
 </body>
