@@ -1,6 +1,6 @@
 section.first-page {
     background-color: #000;
-    > [class*="bg-"] {
+    >[class*="bg-"] {
         opacity: 0;
         transition: 0.8s opacity ease;
         position: absolute;
@@ -24,21 +24,20 @@ section.first-page {
         }
     }
     &.bg-1 {
-        > .bg-one {
+        >.bg-one {
             opacity: 1;
         }
     }
     &.bg-2 {
-        > .bg-two {
+        >.bg-two {
             opacity: 1;
         }
     }
     &.bg-3 {
-        > .bg-three {
+        >.bg-three {
             opacity: 1;
         }
     }
-    //
     #first-page-intro {
         position: absolute;
         bottom: 0;
