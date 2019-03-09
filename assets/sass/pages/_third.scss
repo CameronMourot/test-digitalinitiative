@@ -1,0 +1,78 @@
+section.third-page {
+    background-color: $gray-bg;
+    #slider-wrapper {
+        [class*="col-"] {
+            padding-top: 1em;
+            padding-bottom: 1em;
+            &:nth-child(even) {
+                margin-top: 2em;
+            }
+        }
+        .actu {
+            height: 480px;
+            text-align: left;
+            padding: 2em;
+            box-shadow: 0px 5px 15px 2px rgba(0, 0, 0, 0.25);
+            position: relative;
+            h3 {
+                font-size: $h3-font-size;
+            }
+            .stretched-link:after {
+                z-index: 3;
+            }
+            .ribbon {
+                text-transform: uppercase;
+                font-size: $font-size-xsm;
+                padding: 3px 7px;
+            }
+            * {
+                color: #fff;
+            }
+            &:after {
+                content: '';
+                position: absolute;
+                width: 0;
+                height: 0;
+                bottom: 0;
+                right: 0;
+                z-index: 1;
+                border-style: solid;
+                border-width: 0 0 182px 95px;
+                border-color: transparent transparent #007bff transparent;
+            }
+            .icon-arrow {
+                font-family: $font-family-icomoon;
+                position: absolute;
+                z-index: 2;
+                font-size: 2rem;
+                right: 7px;
+                bottom: 7px;
+                &:before {
+                    content: "\EDDB";
+                }
+            }
+            &.first-actu {
+                background-image: url(../img/ACTUS-1.jpg);
+            }
+            &.second-actu {
+                background-image: url(../img/ACTUS-2.jpg);
+            }
+            &.blue-actu {
+                .ribbon {
+                    background-color: $primary;
+                }
+                &:after {
+                    border-color: transparent transparent $primary transparent;
+                }
+            }
+            &.red-actu {
+                .ribbon {
+                    background-color: $secondary;
+                }
+                &:after {
+                    border-color: transparent transparent $secondary transparent;
+                }
+            }
+        }
+    }
+}

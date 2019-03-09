@@ -51,10 +51,21 @@ $(document).ready(function() {
 
     $(".panel").hover(function() {
             $(this).addClass('panel-hovered');
+
+            //setTimeout(function() {
+            //  $('.panel-content-added').slideDown(400);
+            //}, 700)
         },
         function() {
             $(this).removeClass('panel-hovered');
+            // $('.panel-content-added').slideUp(400);
         });
+
+    $('#slider-wrapper .row').slick({
+        infinite: true,
+        slidesToShow: 2,
+        slidesToScroll: 1
+    });
 
 });
 console.log('working-js');

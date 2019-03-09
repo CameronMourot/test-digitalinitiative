@@ -10,6 +10,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="assets/js/imagesloaded.pkgd.min.js"></script>
     <script src="assets/js/jquery.onepage-scroll.min.js"></script>
+    <script src="assets/js/slick.min.js"></script>
     <script src="assets/js/main.js"></script>
 </head>
 
@@ -168,14 +169,140 @@
         </section>
         <section class="onepage-element second-page">
             <div class="d-flex" id="panel-wrapper">
-                <section class="panel has-bg"></section>
-                <section class="panel has-bg"></section>
-                <section class="panel has-bg"></section>
-                <section class="panel has-bg"></section>
-                <section class="panel has-bg"></section>
+                <section class="panel has-bg">
+                    <div class="panel-content px-3">
+                        <div class="panel-title">
+                            <h3 class="title t-regular">Prendre un rendez-vous</h3>
+                            <span>avec un professionnel</span>
+                        </div>
+                        <div class="panel-content-added">
+                            <p>Grâce à notre plateforme de prise en ligne de rendez-vous, retrouvez facilement l'ensemble des professionnels de santé à Monaco et aux alentours, accèdez à leurs disponibilités et prenez rendez-vous avec eux en quelques clics
+                                seulement !
+                            </p>
+                            <form>
+                                <input type="text" name="search" placeholder="Médecin, établissement, spécialité...">
+                                <input class="btn btn-white w-picto" type="submit" value="Trouver">
+                            </form>
+                        </div>
+                    </div>
+                </section>
+                <section class="panel has-bg">
+                    <div class="panel-content px-3">
+                        <div class="panel-title">
+                            <h3 class="title t-regular">Rechercher une information</h3>
+                            <span>sur un professionnel ou un établissement</span>
+                        </div>
+                        <div class="panel-content-added">
+                            <p>Grâce à notre plateforme de prise en ligne de rendez-vous, retrouvez facilement l'ensemble des professionnels de santé à Monaco et aux alentours, accèdez à leurs disponibilités et prenez rendez-vous avec eux en quelques clics
+                                seulement !
+                            </p>
+                            <form>
+                                <input type="text" name="search" placeholder="Médecin, établissement, spécialité...">
+                                <input class="btn btn-white w-picto" type="submit" value="Trouver">
+                            </form>
+                        </div>
+                    </div>
+                </section>
+                <section class="panel has-bg">
+                    <div class="panel-content px-3">
+                        <div class="panel-title">
+                            <h3 class="title t-regular">Réaliser une pré-admission</h3>
+                            <span>et gagner du temps à votre arrivée</span>
+                        </div>
+                        <div class="panel-content-added">
+                            <p>Grâce à notre plateforme de prise en ligne de rendez-vous, retrouvez facilement l'ensemble des professionnels de santé à Monaco et aux alentours, accèdez à leurs disponibilités et prenez rendez-vous avec eux en quelques clics
+                                seulement !
+                            </p>
+                            <form>
+                                <input type="text" name="search" placeholder="Médecin, établissement, spécialité...">
+                                <input class="btn btn-white w-picto" type="submit" value="Trouver">
+                            </form>
+                        </div>
+                    </div>
+                </section>
+                <section class="panel has-bg">
+                    <div class="panel-content px-3">
+                        <div class="panel-title">
+                            <h3 class="title t-regular">Payez en ligne</h3>
+                            <span>votre consultation en toute sécurité</span>
+                        </div>
+                        <div class="panel-content-added">
+                            <p>Grâce à notre plateforme de prise en ligne de rendez-vous, retrouvez facilement l'ensemble des professionnels de santé à Monaco et aux alentours, accèdez à leurs disponibilités et prenez rendez-vous avec eux en quelques clics
+                                seulement !
+                            </p>
+                            <form>
+                                <input type="text" name="search" placeholder="Médecin, établissement, spécialité...">
+                                <input class="btn btn-white w-picto" type="submit" value="Trouver">
+                            </form>
+                        </div>
+                    </div>
+                </section>
+                <section class="panel has-bg">
+                    <div class="panel-content px-3">
+                        <div class="panel-title">
+                            <h3 class="title t-regular">Réaliser une télé-consultation</h3>
+                            <span>depuis votre domicile en toute simplicité</span>
+                        </div>
+                        <div class="panel-content-added">
+                            <p>Grâce à notre plateforme de prise en ligne de rendez-vous, retrouvez facilement l'ensemble des professionnels de santé à Monaco et aux alentours, accèdez à leurs disponibilités et prenez rendez-vous avec eux en quelques clics
+                                seulement !
+                            </p>
+                            <form>
+                                <input type="text" name="search" placeholder="Médecin, établissement, spécialité...">
+                                <input class="btn btn-white w-picto" type="submit" value="Trouver">
+                            </form>
+                        </div>
+                    </div>
+                </section>
             </div>
         </section>
-        <section class="onepage-element third-page has-bg">Some section</section>
+        <section class="onepage-element third-page has-bg">
+            <div id="actu-wrapper">
+                <div class="container text-center">
+                    <h2 class="big-title title t-thin">Actualités</h2>
+                    <section id="slider-wrapper">
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="actu first-actu red-actu has-bg">
+                                    <a href="#" class="stretched-link">
+                                        <h3 class="t-light">En novembre, on arrête ensemble</h3>
+                                    </a>
+                                    <span class="ribbon">Prévention</span>
+                                    <div>
+                                        <span class="icon-arrow"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="actu second-actu blue-actu has-bg">
+                                    <a href="#" class="stretched-link">
+                                        <h3 class="t-light">Téléconsultation, coup d'envoi le 15 janvier</h3>
+                                    </a>
+                                    <span class="ribbon">Services</span>
+                                    <span class="icon-arrow"></span>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="actu first-actu red-actu has-bg">
+                                    <a href="#" class="stretched-link">
+                                        <h3 class="t-light">En novembre, on arrête ensemble</h3>
+                                    </a>
+                                    <span class="ribbon">Prévention</span>
+                                    <span class="icon-arrow"></span>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="actu second-actu blue-actu has-bg">
+                                    <h3 class="t-light">Téléconsultation, coup d'envoi le 15 janvier</h3>
+                                    <span class="ribbon">Services</span>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <a class="btn btn-blue" href="#">Toute l'actualité</a>
+                </div>
+            </div>
+        </section>
         <section class="onepage-element fourth-page has-bg">Some section</section>
         <section class="onepage-element fifth-page has-bg">Some section</section>
         <section class="onepage-element sixth-page has-bg">Some section</section>

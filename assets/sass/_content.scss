@@ -22,14 +22,45 @@ body {
 
 .title {
     text-transform: uppercase;
-    &.t-medium {
-        font-family: $font-family-robotomedium;
+}
+
+.t-medium {
+    font-family: $font-family-robotomedium;
+}
+
+.t-regular {
+    font-family: $font-family-robotoregular;
+}
+
+.t-light {
+    font-family: $font-family-robotolight;
+}
+
+.t-thin {
+    font-family: $font-family-robotothin;
+}
+
+.big-title {
+    @include ax_responsive(font-size, $h1-font-size, $h1-font-size, 56px, 64px);
+    color: $primary;
+    margin: .8em 0 .5em;
+}
+
+.btn {
+    &.btn-white {
+        border: 1px solid #fff;
+        border-radius: 0;
+        background: transparent;
+        color: #fff;
+        &.w-picto {
+            //padding-left: 35px;
+        }
     }
-    &.t-regular {
-        font-family: $font-family-robotoregular;
-    }
-    &.t-thin {
-        font-family: $font-family-robotothin;
+    &.btn-blue {
+        border: 1px solid $primary;
+        border-radius: 0;
+        background: transparent;
+        color: $primary;
     }
 }
 
