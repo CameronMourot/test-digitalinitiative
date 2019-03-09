@@ -1,3 +1,39 @@
 section.second-page {
-    background-image: url(../img/Section1-image2.jpg);
+    #panel-wrapper {
+        height: 100vh;
+        >.panel {
+            width: 20%;
+            transition: 0.4s width ease;
+            //border: 0.5px solid blue;
+            &:nth-child(1) {
+                background-image: url(../img/service-RDV.jpg);
+            }
+            &:nth-child(2) {
+                background-image: url(../img/service-annuaire.jpg);
+            }
+            &:nth-child(3) {
+                background-image: url(../img/service-preadmission.jpg);
+            }
+            &:nth-child(4) {
+                background-image: url(../img/service-paiement.jpg);
+            }
+            &:nth-child(5) {
+                background-image: url(../img/service-tele.jpg);
+            }
+            &.panel-hovered {
+                width: 40%;
+                position: relative;
+                cursor: pointer;
+                &:before {
+                    content: '';
+                    position: absolute;
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    transition: width 0.4s ease;
+                    background-color: rgba($primary, .65);
+                }
+            }
+        }
+    }
 }
