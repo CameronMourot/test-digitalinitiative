@@ -16,9 +16,13 @@ section.third-page {
             position: relative;
             h3 {
                 font-size: $h3-font-size;
+                text-decoration: none;
             }
-            .stretched-link:after {
-                z-index: 3;
+            .stretched-link {
+                text-decoration: none;
+                &:after {
+                    z-index: 3;
+                }
             }
             .ribbon {
                 text-transform: uppercase;
@@ -39,6 +43,7 @@ section.third-page {
                 border-style: solid;
                 border-width: 0 0 182px 95px;
                 border-color: transparent transparent #007bff transparent;
+                transition: 0.4s border-width ease;
             }
             .icon-arrow {
                 font-family: $font-family-icomoon;
@@ -71,6 +76,11 @@ section.third-page {
                 }
                 &:after {
                     border-color: transparent transparent $secondary transparent;
+                }
+            }
+            &:hover {
+                &:after {
+                    border-width: 0 0 202px 185px;
                 }
             }
         }

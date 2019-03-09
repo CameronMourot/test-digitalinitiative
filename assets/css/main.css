@@ -8927,6 +8927,10 @@ section.third-page #slider-wrapper .actu {
 }
 section.third-page #slider-wrapper .actu h3 {
   font-size: 1.75rem;
+  text-decoration: none;
+}
+section.third-page #slider-wrapper .actu .stretched-link {
+  text-decoration: none;
 }
 section.third-page #slider-wrapper .actu .stretched-link:after {
   z-index: 3;
@@ -8950,6 +8954,7 @@ section.third-page #slider-wrapper .actu:after {
   border-style: solid;
   border-width: 0 0 182px 95px;
   border-color: transparent transparent #007bff transparent;
+  transition: 0.4s border-width ease;
 }
 section.third-page #slider-wrapper .actu .icon-arrow {
   font-family: "IcoMoon-Ultimate", "Arial", "sans-serif";
@@ -8979,6 +8984,66 @@ section.third-page #slider-wrapper .actu.red-actu .ribbon {
 }
 section.third-page #slider-wrapper .actu.red-actu:after {
   border-color: transparent transparent #d30001 transparent;
+}
+section.third-page #slider-wrapper .actu:hover:after {
+  border-width: 0 0 202px 185px;
+}
+
+section.fourth-page {
+  background: #008791 url(../img/pro.jpg) no-repeat right;
+  background-size: contain;
+}
+section.fourth-page #background-pro {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 45vw;
+  background-color: #008791;
+}
+section.fourth-page #background-pro:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  right: calc(-90vw/4);
+  top: 0;
+  bottom: 0;
+  border-style: solid;
+  border-width: 100vh calc(90vw/4) 0 0;
+  border-color: #008791 transparent transparent transparent;
+}
+section.fourth-page #pro-content {
+  position: absolute;
+  top: 96px;
+  bottom: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+}
+section.fourth-page #pro-content > div {
+  width: 50vw;
+  padding-left: 3em;
+}
+section.fourth-page #pro-content > div span {
+  display: block;
+}
+section.fourth-page #pro-content > div * {
+  color: #fff;
+}
+section.fourth-page #pro-content .title {
+  font-size: 4rem;
+}
+section.fourth-page #pro-content .baseline {
+  font-size: 2.375rem;
+  font-family: "Roboto-Medium", "Arial", "sans-serif";
+  margin-bottom: 10px;
+}
+section.fourth-page #pro-content p {
+  font-family: "Roboto-Light", "Arial", "sans-serif";
+  margin-bottom: 3em;
+  font-size: 1.3125rem;
+  line-height: 1.2;
 }
 
 body,
