@@ -67,5 +67,18 @@ $(document).ready(function() {
         slidesToScroll: 1
     });
 
+    // masonry 
+    var $grid = $('.gallery-wrapper').masonry({
+        itemSelector: '.grid-item',
+        columnWidth: '.grid-sizer',
+        horizontalOrder: true,
+        percentPosition: true,
+        transitionDuration: 0,
+    });
+
+    $grid.imagesLoaded().progress(function() {
+        $grid.masonry();
+    });
+
 });
 console.log('working-js');

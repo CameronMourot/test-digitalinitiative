@@ -9046,6 +9046,108 @@ section.fourth-page #pro-content p {
   line-height: 1.2;
 }
 
+section.fifth-page {
+  background-color: #EFEEF0;
+  background-image: url(../img/barres.png);
+}
+section.fifth-page #networks-wrapper article {
+  position: relative;
+  background-color: #fff;
+  box-shadow: 0px 5px 30px 2px rgba(0, 0, 0, 0.15);
+}
+section.fifth-page #networks-wrapper article .stretched-link {
+  text-decoration: none;
+}
+section.fifth-page #networks-wrapper article .stretched-link:after {
+  z-index: 3;
+}
+section.fifth-page #networks-wrapper article .img {
+  height: 352px;
+  background-color: #bcbcbc;
+}
+section.fifth-page #networks-wrapper article .post-title {
+  padding: 1.5em 2em 3em;
+  text-align: left;
+}
+section.fifth-page #networks-wrapper article .post-title h3 {
+  font-family: "Roboto-Light", "Arial", "sans-serif";
+  font-size: 1.25rem;
+}
+section.fifth-page #networks-wrapper article:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 0;
+  border-style: solid;
+  border-width: 140px 73px 0 0;
+  border-color: #007bff transparent transparent transparent;
+  transition: 0.4s border-width ease;
+}
+section.fifth-page #networks-wrapper article:after {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  top: 13px;
+  left: 13px;
+  background-size: contain;
+}
+section.fifth-page #networks-wrapper article:hover:before {
+  border-width: 150px 170px 0 0;
+}
+section.fifth-page #networks-wrapper .row > div {
+  margin-bottom: 30px;
+}
+section.fifth-page #networks-wrapper .row > div:nth-child(2) {
+  margin-top: 1em;
+}
+section.fifth-page #networks-wrapper .row > div:nth-child(2) .img {
+  background-image: url(../img/followus-1.jpg);
+}
+section.fifth-page #networks-wrapper .row > div:nth-child(3) {
+  margin-top: 2em;
+}
+section.fifth-page #networks-wrapper .row > div:nth-child(3) .img {
+  background-image: url(../img/followus-2.jpg);
+}
+section.fifth-page #networks-wrapper .row > div:nth-child(4) .img {
+  background-image: url(../img/followus-3.jpg);
+}
+section.fifth-page #networks-wrapper .row > div:nth-child(5) .img {
+  background-image: url(../img/Section1-image3.jpg);
+}
+section.fifth-page #networks-wrapper .row > div:nth-child(6) .img {
+  background-image: url(../img/Section1-image2.jpg);
+}
+section.fifth-page #networks-wrapper .row > div:nth-child(7) .img {
+  background-image: url(../img/Section1-image1.jpg);
+}
+section.fifth-page #networks-wrapper .row > div:nth-child(even) article:before {
+  border-color: #3d5c9a transparent transparent transparent;
+}
+section.fifth-page #networks-wrapper .row > div:nth-child(even) article:after {
+  width: 17px;
+  height: 33px;
+  background: url(../img/svg/facebook.svg) no-repeat center;
+}
+section.fifth-page #networks-wrapper .row > div:nth-child(even) .post-title h3 {
+  color: #3d5c9a;
+}
+section.fifth-page #networks-wrapper .row > div:nth-child(odd) article:before {
+  border-color: #009EE2 transparent transparent transparent;
+}
+section.fifth-page #networks-wrapper .row > div:nth-child(odd) article:after {
+  width: 30px;
+  height: 25px;
+  background: url(../img/svg/twitter.svg) no-repeat center;
+}
+section.fifth-page #networks-wrapper .row > div:nth-child(odd) .post-title h3 {
+  color: #009EE2;
+}
+
 body,
 html {
   margin: 0;
