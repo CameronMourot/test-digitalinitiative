@@ -1,1 +1,121 @@
-section#seventh-page {}
+section#seventh-page {
+    .first-part {
+        background-color: #F7F7F7;
+        padding: 4em 2em;
+        .myhealth-logo {
+            border-bottom: 1px solid $gray-200;
+            padding-bottom: 2em;
+            margin-bottom: 4em;
+            svg {
+                width: 299px;
+                height: 77px;
+                .heart {
+                    fill: $primary;
+                }
+            }
+        }
+        .info-letter {
+            input[type="text"] {
+                width: 100%;
+                border: none;
+                padding: 10px;
+                font-family: $font-family-robotolight;
+                color: $gray-600;
+                margin-bottom: 1em;
+                box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.1);
+            }
+        }
+        .myhealth-networks {
+            a {
+                font-family: $font-family-robotolight;
+            }
+            .picto {
+                width: 40px;
+                height: 40px;
+                border-radius: 40px;
+                margin-right: 10px;
+                position: relative;
+                &:before {
+                    content: '';
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    background-size: contain;
+                }
+            }
+            .facebook-myhealth,
+            .twitter-myhealth {
+                display: flex;
+                align-items: center;
+            }
+            .facebook-myhealth {
+                margin-bottom: 20px;
+                a {
+                    color: $facebook;
+                }
+                .picto {
+                    background-color: $facebook;
+                    &:before {
+                        background: url(../img/svg/facebook.svg) no-repeat center;
+                        width: 13px;
+                        height: 25px;
+                    }
+                }
+            }
+            .twitter-myhealth {
+                a {
+                    color: $twitter;
+                }
+                .picto {
+                    background-color: $twitter;
+                    &:before {
+                        background: url(../img/svg/twitter.svg) no-repeat center;
+                        width: 22px;
+                        height: 18px;
+                    }
+                }
+            }
+        }
+        .myhealth-links {
+            a {
+                color: #2D2823;
+                text-transform: uppercase;
+                font-size: $font-size-lg;
+                display: block;
+                font-family: $font-family-robotolight;
+                margin-bottom: 5px;
+                transition: padding-left .2s ease;
+                &:hover {
+                    padding-left: 6px;
+                    text-decoration: none;
+                }
+            }
+        }
+        .col-title {
+            color: #2D2823;
+            font-size: $font-size-lg;
+            margin-bottom: 10px;
+            display: block;
+        }
+    }
+    .second-part {
+        padding: 2em;
+        .title {
+            font-size: $font-size-xlg;
+            padding-bottom: 12px;
+            display: block;
+        }
+    }
+    .footer-links {
+        a {
+            display: block;
+            font-family: $font-family-robotolight;
+            transition: padding-left .2s ease, color .2s ease;
+            &:hover {
+                padding-left: 6px;
+                text-decoration: none;
+            }
+        }
+    }
+}

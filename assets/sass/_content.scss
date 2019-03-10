@@ -47,11 +47,16 @@ body {
 }
 
 .btn {
+    transition: .3s background-color ease, .3s color ease;
     &.btn-white {
         border: 1px solid #fff;
         border-radius: 0;
         background: transparent;
         color: #fff;
+        &:hover {
+            background-color: #fff;
+            color: $primary;
+        }
         &.w-picto {
             //padding-left: 35px;
         }
@@ -61,6 +66,10 @@ body {
         border-radius: 0;
         background: transparent;
         color: $primary;
+        &:hover {
+            background-color: $primary;
+            color: #fff;
+        }
     }
 }
 

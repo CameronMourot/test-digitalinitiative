@@ -31,10 +31,9 @@ section#fifth-page {
         >div {
             width: 50vw;
             padding-left: 3em;
-            span {
+            span,
+            p {
                 display: block;
-            }
-            * {
                 color: #fff;
             }
         }

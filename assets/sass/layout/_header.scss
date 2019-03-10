@@ -49,9 +49,26 @@ $head-height: 96px;
     color: #fff;
     font-size: $font-size-xlg;
     padding: 0 15px;
+    &:hover {
+        cursor: pointer;
+    }
 }
 
 .icon-warning2 {
+    position: relative;
+    &:after {
+        content: '1';
+        background-color: $secondary;
+        position: absolute;
+        border-radius: 20px;
+        color: #fff;
+        padding: 0px 4px;
+        font-size: 9px;
+        width: 13px;
+        top: 8px;
+        right: 10px;
+        height: 13px;
+    }
     &:before {
         content: "\ed4d";
     }

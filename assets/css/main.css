@@ -8468,17 +8468,28 @@ body {
   }
 }
 
+.btn {
+  transition: 0.3s background-color ease, 0.3s color ease;
+}
 .btn.btn-white {
   border: 1px solid #fff;
   border-radius: 0;
   background: transparent;
   color: #fff;
 }
+.btn.btn-white:hover {
+  background-color: #fff;
+  color: #008791;
+}
 .btn.btn-blue {
   border: 1px solid #008791;
   border-radius: 0;
   background: transparent;
   color: #008791;
+}
+.btn.btn-blue:hover {
+  background-color: #008791;
+  color: #fff;
 }
 
 .has-bg {
@@ -8556,7 +8567,26 @@ body {
   font-size: 1.5rem;
   padding: 0 15px;
 }
+[class*=icon-]:hover {
+  cursor: pointer;
+}
 
+.icon-warning2 {
+  position: relative;
+}
+.icon-warning2:after {
+  content: "1";
+  background-color: #d30001;
+  position: absolute;
+  border-radius: 20px;
+  color: #fff;
+  padding: 0px 4px;
+  font-size: 9px;
+  width: 13px;
+  top: 8px;
+  right: 10px;
+  height: 13px;
+}
 .icon-warning2:before {
   content: "";
 }
@@ -8819,6 +8849,31 @@ section#first-page #first-page-intro .scroll-down-icon #animated-path {
     opacity: 0.2;
   }
 }
+section#first-page .help {
+  position: absolute;
+  bottom: 17px;
+  right: 20px;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 5px 20px;
+  display: flex;
+  align-items: center;
+  border-radius: 100px;
+  transition: 0.3s bottom ease;
+}
+section#first-page .help span {
+  color: #fff;
+}
+section#first-page .help .icon-talk {
+  padding: 0;
+  padding-right: 10px;
+}
+section#first-page .help .icon-talk:before {
+  content: "";
+}
+section#first-page .help:hover {
+  text-decoration: none;
+  bottom: 22px;
+}
 
 section#second-page #panel-wrapper {
   height: 100vh;
@@ -8849,7 +8904,7 @@ section#second-page #panel-wrapper > .panel .panel-content {
   z-index: 3;
   padding-bottom: 7em;
 }
-section#second-page #panel-wrapper > .panel .panel-content * {
+section#second-page #panel-wrapper > .panel .panel-content p {
   color: #fff;
 }
 section#second-page #panel-wrapper > .panel .panel-title {
@@ -8859,6 +8914,7 @@ section#second-page #panel-wrapper > .panel .panel-title {
 }
 section#second-page #panel-wrapper > .panel .panel-title .title {
   margin: 0;
+  color: #fff;
 }
 @media (max-width: 575.98px) {
   section#second-page #panel-wrapper > .panel .panel-title .title {
@@ -8883,6 +8939,7 @@ section#second-page #panel-wrapper > .panel .panel-title .title {
 section#second-page #panel-wrapper > .panel .panel-title span {
   font-size: 1.25rem;
   font-family: "Roboto-Light", "Arial", "sans-serif";
+  color: #fff;
 }
 section#second-page #panel-wrapper > .panel .panel-content-added form {
   padding-top: 1em;
@@ -9131,10 +9188,9 @@ section#fifth-page #pro-content > div {
   width: 50vw;
   padding-left: 3em;
 }
-section#fifth-page #pro-content > div span {
+section#fifth-page #pro-content > div span,
+section#fifth-page #pro-content > div p {
   display: block;
-}
-section#fifth-page #pro-content > div * {
   color: #fff;
 }
 section#fifth-page #pro-content .title {
@@ -9252,6 +9308,116 @@ section#sixth-page #networks-wrapper .row > div:nth-child(odd) article:after {
 }
 section#sixth-page #networks-wrapper .row > div:nth-child(odd) .post-title h3 {
   color: #009EE2;
+}
+
+section#seventh-page .first-part {
+  background-color: #F7F7F7;
+  padding: 4em 2em;
+}
+section#seventh-page .first-part .myhealth-logo {
+  border-bottom: 1px solid #dddddd;
+  padding-bottom: 2em;
+  margin-bottom: 4em;
+}
+section#seventh-page .first-part .myhealth-logo svg {
+  width: 299px;
+  height: 77px;
+}
+section#seventh-page .first-part .myhealth-logo svg .heart {
+  fill: #008791;
+}
+section#seventh-page .first-part .info-letter input[type=text] {
+  width: 100%;
+  border: none;
+  padding: 10px;
+  font-family: "Roboto-Light", "Arial", "sans-serif";
+  color: #6c757d;
+  margin-bottom: 1em;
+  box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.1);
+}
+section#seventh-page .first-part .myhealth-networks a {
+  font-family: "Roboto-Light", "Arial", "sans-serif";
+}
+section#seventh-page .first-part .myhealth-networks .picto {
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+  margin-right: 10px;
+  position: relative;
+}
+section#seventh-page .first-part .myhealth-networks .picto:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-size: contain;
+}
+section#seventh-page .first-part .myhealth-networks .facebook-myhealth,
+section#seventh-page .first-part .myhealth-networks .twitter-myhealth {
+  display: flex;
+  align-items: center;
+}
+section#seventh-page .first-part .myhealth-networks .facebook-myhealth {
+  margin-bottom: 20px;
+}
+section#seventh-page .first-part .myhealth-networks .facebook-myhealth a {
+  color: #3d5c9a;
+}
+section#seventh-page .first-part .myhealth-networks .facebook-myhealth .picto {
+  background-color: #3d5c9a;
+}
+section#seventh-page .first-part .myhealth-networks .facebook-myhealth .picto:before {
+  background: url(../img/svg/facebook.svg) no-repeat center;
+  width: 13px;
+  height: 25px;
+}
+section#seventh-page .first-part .myhealth-networks .twitter-myhealth a {
+  color: #009EE2;
+}
+section#seventh-page .first-part .myhealth-networks .twitter-myhealth .picto {
+  background-color: #009EE2;
+}
+section#seventh-page .first-part .myhealth-networks .twitter-myhealth .picto:before {
+  background: url(../img/svg/twitter.svg) no-repeat center;
+  width: 22px;
+  height: 18px;
+}
+section#seventh-page .first-part .myhealth-links a {
+  color: #2D2823;
+  text-transform: uppercase;
+  font-size: 1.25rem;
+  display: block;
+  font-family: "Roboto-Light", "Arial", "sans-serif";
+  margin-bottom: 5px;
+  transition: padding-left 0.2s ease;
+}
+section#seventh-page .first-part .myhealth-links a:hover {
+  padding-left: 6px;
+  text-decoration: none;
+}
+section#seventh-page .first-part .col-title {
+  color: #2D2823;
+  font-size: 1.25rem;
+  margin-bottom: 10px;
+  display: block;
+}
+section#seventh-page .second-part {
+  padding: 2em;
+}
+section#seventh-page .second-part .title {
+  font-size: 1.5rem;
+  padding-bottom: 12px;
+  display: block;
+}
+section#seventh-page .footer-links a {
+  display: block;
+  font-family: "Roboto-Light", "Arial", "sans-serif";
+  transition: padding-left 0.2s ease, color 0.2s ease;
+}
+section#seventh-page .footer-links a:hover {
+  padding-left: 6px;
+  text-decoration: none;
 }
 
 body,
