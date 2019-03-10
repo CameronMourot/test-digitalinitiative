@@ -101,5 +101,42 @@ body {
         &:after {
             background-color: #fff;
         }
+        @include media-breakpoint-down(sm) {
+            top: 21px;
+        }
+    }
+}
+
+#contain-menu-items {
+    text-align: center;
+    a {
+        font-family: $font-family-robotolight;
+        color: #fff;
+        font-size: rem(35);
+        margin-bottom: 10px;
+        position: relative;
+        &:before,
+        &:after {
+            content: '';
+            opacity: 0;
+            transition: 0.3s opacity ease;
+        }
+        &:hover {
+            text-decoration: none;
+            &:before,
+            &:after {
+                content: '-';
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                opacity: 1;
+            }
+            &:before {
+                left: -20px;
+            }
+            &:after {
+                right: -20px;
+            }
+        }
     }
 }

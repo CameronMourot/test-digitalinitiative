@@ -42,6 +42,22 @@ $head-height: 96px;
         width: 60px;
         position: relative;
     }
+    @include media-breakpoint-down(sm) {
+        height: 60px;
+        [class*="icon-"] {
+            display: none;
+        }
+        .menu-burger {
+            background-color: transparent;
+        }
+        .btn-burger {
+            i,
+            &:before,
+            &:after {
+                background-color: #fff;
+            }
+        }
+    }
 }
 
 [class*="icon-"] {

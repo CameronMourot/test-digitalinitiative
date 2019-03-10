@@ -74,7 +74,13 @@ $(document).ready(function() {
     $('#slider-wrapper .row').slick({
         infinite: true,
         slidesToShow: 2,
-        slidesToScroll: 1
+        slidesToScroll: 1,
+        responsive: [{
+            breakpoint: 767,
+            settings: {
+                slidesToShow: 1
+            }
+        }]
     });
 
     // Masonry sixth page
@@ -108,6 +114,21 @@ $(document).ready(function() {
         $fourth.removeClass('bg-2');
         $fourth.removeClass('bg-1');
     });
+
+
+    $('#panel-wrapper').slick({
+        infinite: false,
+        mobileFirst: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        dots: true,
+        responsive: [{
+            breakpoint: 992,
+            settings: "unslick"
+        }]
+    });
+
 
 });
 console.log('working-js');

@@ -1,7 +1,7 @@
 section#second-page {
     #panel-wrapper {
         height: 100vh;
-        >.panel {
+        .panel {
             display: flex;
             align-items: flex-end;
             width: 20%;
@@ -96,6 +96,15 @@ section#second-page {
                     }
                 }
             }
+        }
+    }
+    @include media-breakpoint-down(sm) {
+        height: auto;
+        #panel-wrapper {
+            height: auto;
+        }
+        .panel {
+            width: 100%;
         }
     }
 }
