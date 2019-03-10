@@ -1,127 +1,59 @@
-section.fifth-page {
-    background-color: $gray-bg;
-    background-image: url(../img/barres.png);
-    #networks-wrapper {
-        article {
-            position: relative;
-            background-color: #fff;
-            box-shadow: 0px 5px 30px 2px rgba(0, 0, 0, 0.15);
-            .stretched-link {
-                text-decoration: none;
-                &:after {
-                    z-index: 3;
-                }
+section#fifth-page {
+    background: $primary url(../img/pro.jpg) no-repeat right;
+    background-size: contain;
+    #background-pro {
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 45vw;
+        background-color: $primary;
+        &:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 0;
+            right: calc(-90vw/4);
+            top: 0;
+            bottom: 0;
+            border-style: solid;
+            border-width: 100vh calc(90vw/4) 0 0;
+            border-color: $primary transparent transparent transparent;
+        }
+    }
+    #pro-content {
+        position: absolute;
+        top: 0 + $head-height;
+        bottom: 0;
+        z-index: 2;
+        display: flex;
+        align-items: center;
+        >div {
+            width: 50vw;
+            padding-left: 3em;
+            span {
+                display: block;
             }
-            .img {
-                height: 352px;
-                background-color: $gray-400;
-            }
-            .post-title {
-                padding: 1.5em 2em 3em;
-                text-align: left;
-                h3 {
-                    font-family: $font-family-robotolight;
-                    font-size: $font-size-lg;
-                }
-            }
-            &:before {
-                content: '';
-                position: absolute;
-                width: 0;
-                height: 0;
-                top: 0;
-                left: 0;
-                z-index: 1;
-                width: 0;
-                border-style: solid;
-                border-width: 140px 73px 0 0;
-                border-color: #007bff transparent transparent transparent;
-                transition: 0.4s border-width ease;
-            }
-            &:after {
-                content: '';
-                position: absolute;
-                z-index: 2;
-                top: 13px;
-                left: 13px;
-                background-size: contain;
-            }
-            &:hover {
-                &:before {
-                    border-width: 150px 170px 0 0;
-                }
+            * {
+                color: #fff;
             }
         }
-        .row {
-            >div {
-                margin-bottom: $grid-gutter-width;
-            }
-            >div:nth-child(2) {
-                margin-top: 1em;
-                .img {
-                    background-image: url(../img/followus-1.jpg);
-                }
-            }
-            >div:nth-child(3) {
-                margin-top: 2em;
-                .img {
-                    background-image: url(../img/followus-2.jpg);
-                }
-            }
-            >div:nth-child(4) {
-                .img {
-                    background-image: url(../img/followus-3.jpg);
-                }
-            }
-            >div:nth-child(5) {
-                .img {
-                    background-image: url(../img/Section1-image3.jpg);
-                }
-            }
-            >div:nth-child(6) {
-                .img {
-                    background-image: url(../img/Section1-image2.jpg);
-                }
-            }
-            >div:nth-child(7) {
-                .img {
-                    background-image: url(../img/Section1-image1.jpg);
-                }
-            }
-            >div:nth-child(even) {
-                article {
-                    &:before {
-                        border-color: $facebook transparent transparent transparent;
-                    }
-                    &:after {
-                        width: 17px;
-                        height: 33px;
-                        background: url(../img/svg/facebook.svg) no-repeat center;
-                    }
-                }
-                .post-title {
-                    h3 {
-                        color: $facebook;
-                    }
-                }
-            }
-            >div:nth-child(odd) {
-                article {
-                    &:before {
-                        border-color: $twitter transparent transparent transparent;
-                    }
-                    &:after {
-                        width: 30px;
-                        height: 25px;
-                        background: url(../img/svg/twitter.svg) no-repeat center;
-                    }
-                }
-                .post-title {
-                    h3 {
-                        color: $twitter;
-                    }
-                }
-            }
+        .title {
+            //@include ax_responsive(font-size, $h1-font-size, $h1-font-size, rem(56), rem(64));
+            font-size: rem(64);
+        }
+        .baseline {
+            //@include ax_responsive(font-size, $font-size-xlg, $font-size-xlg, rem(34),);
+            font-size: rem(38);
+            font-family: $font-family-robotomedium;
+            margin-bottom: 10px;
+        }
+        p {
+            font-family: $font-family-robotolight;
+            margin-bottom: 3em;
+            //@include ax_responsive(font-size, $font-size-sm, $font-size-base, rem(19), rem(21));
+            font-size: rem(21);
+            line-height: $line-height-lg;
         }
     }
 }

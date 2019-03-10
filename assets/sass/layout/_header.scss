@@ -215,6 +215,12 @@ body:not(.viewing-page-1) {
     }
 }
 
+body.viewing-page-7 {
+    #header {
+        transform: translateY(-100%);
+    }
+}
+
 //TEST
 
 /* * {

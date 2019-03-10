@@ -1,18 +1,5 @@
-section.first-page {
-    background-color: #000;
+section#first-page {
     >[class*="bg-"] {
-        opacity: 0;
-        transition: 0.8s opacity ease;
-        position: absolute;
-        top: 0;
-        right: 0;
-        left: 0;
-        bottom: 0;
-        img {
-            width: 100vw;
-            height: 100vh;
-            object-fit: cover;
-        }
         &:before {
             content: '';
             position: absolute;
@@ -21,21 +8,6 @@ section.first-page {
             left: 0;
             bottom: 0;
             background-image: linear-gradient(rgba(0, 0, 0, .25) 45%, $primary);
-        }
-    }
-    &.bg-1 {
-        >.bg-one {
-            opacity: 1;
-        }
-    }
-    &.bg-2 {
-        >.bg-two {
-            opacity: 1;
-        }
-    }
-    &.bg-3 {
-        >.bg-three {
-            opacity: 1;
         }
     }
     #first-page-intro {

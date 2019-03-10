@@ -66,6 +66,7 @@ html {
     -webkit-border-radius: 100px;
     -moz-border-radius: 100px;
     box-shadow: 0 0 6px 0 rgba(0, 0, 0, .25);
+    transition: border-color 1s ease, box-shadow 1s ease;
 }
 
 .onepage-pagination li a.active:before {

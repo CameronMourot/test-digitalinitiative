@@ -2,4 +2,51 @@
     &:not(:nth-child(-n+2)) {
         padding-top: $head-height;
     }
+    &#seventh-page {
+        padding-top: 0;
+    }
+}
+
+section#first-page,
+section#fourth-page {
+    background-color: #000;
+    >[class*="bg-"] {
+        opacity: 0;
+        transition: 0.8s opacity ease;
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        img {
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover;
+        }
+    }
+    &.bg-1 {
+        >.bg-one {
+            opacity: 1;
+        }
+    }
+    &.bg-2 {
+        >.bg-two {
+            opacity: 1;
+        }
+    }
+    &.bg-3 {
+        >.bg-three {
+            opacity: 1;
+        }
+    }
+}
+
+body.viewing-page-3,
+body.viewing-page-6,
+body.viewing-page-7 {
+    .onepage-pagination li a:before,
+    .onepage-pagination li a.active:before {
+        border-color: $gray-400;
+        box-shadow: none;
+    }
 }
