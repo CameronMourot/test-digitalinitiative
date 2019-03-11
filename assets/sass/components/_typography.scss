@@ -1,52 +1,59 @@
 h1,
 .h1 {
-	@include ax_responsive(font-size, $h1-font-size * 0.95, $h1-font-size * 0.8, $h1-font-size * 0.9, $h1-font-size);
+    @include responsive(font-size, $h1-font-size * 0.95, $h1-font-size * 0.8, $h1-font-size * 0.9, $h1-font-size);
 }
+
 h2,
 .h2 {
-	@include ax_responsive(font-size, $h2-font-size * 0.7, $h2-font-size * 0.8, $h2-font-size * 0.9, $h2-font-size);
+    @include responsive(font-size, $h2-font-size * 0.7, $h2-font-size * 0.8, $h2-font-size * 0.9, $h2-font-size);
 }
+
 h3,
 .h3 {
-	@include ax_responsive(font-size, $h3-font-size * 0.7, $h3-font-size * 0.8, $h3-font-size * 0.9, $h3-font-size);
+    @include responsive(font-size, $h3-font-size * 0.7, $h3-font-size * 0.8, $h3-font-size * 0.9, $h3-font-size);
 }
+
 h4,
 .h4 {
-	@include ax_responsive(font-size, $h4-font-size * 0.7, $h4-font-size * 0.8, $h4-font-size * 0.9, $h4-font-size);
+    @include responsive(font-size, $h4-font-size * 0.7, $h4-font-size * 0.8, $h4-font-size * 0.9, $h4-font-size);
 }
+
 h5,
 .h5 {
-	@include ax_responsive(font-size, $h5-font-size * 0.7, $h5-font-size * 0.8, $h5-font-size * 0.9, $h5-font-size);
+    @include responsive(font-size, $h5-font-size * 0.7, $h5-font-size * 0.8, $h5-font-size * 0.9, $h5-font-size);
 }
+
 h6,
 .h6 {
-	@include ax_responsive(font-size, $h6-font-size * 0.7, $h6-font-size * 0.8, $h6-font-size * 0.9, $h6-font-size);
+    @include responsive(font-size, $h6-font-size * 0.7, $h6-font-size * 0.8, $h6-font-size * 0.9, $h6-font-size);
 }
 
 ul {
-	margin: 0;
-	padding: 0;
-	list-style: none;
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
 
 p {
-	margin-bottom: 0.5625rem;
+    margin-bottom: 0.5625rem;
 }
 
-h1,h2,h3 {
-	span {
-		font-weight: $font-weight-normal;
-		display: block;
-		font-size: $h4-font-size;
-		margin-top: 7px;
-	}
+h1,
+h2,
+h3 {
+    span {
+        font-weight: $font-weight-normal;
+        display: block;
+        font-size: $h4-font-size;
+        margin-top: 7px;
+    }
 }
 
 .page-heading {
-	@include ax_responsive(font-size, $h1-font-size * 0.95, $h1-font-size * 0.8, $h1-font-size * 0.9, $h1-font-size);
-	font-weight: $headings-font-weight;
-	font-family: $headings-font-family;
-	margin-bottom: 1.2rem;
-	text-align: center;
-	color: $headings-color;
+    @include responsive(font-size, $h1-font-size * 0.95, $h1-font-size * 0.8, $h1-font-size * 0.9, $h1-font-size);
+    font-weight: $headings-font-weight;
+    font-family: $headings-font-family;
+    margin-bottom: 1.2rem;
+    text-align: center;
+    color: $headings-color;
 }

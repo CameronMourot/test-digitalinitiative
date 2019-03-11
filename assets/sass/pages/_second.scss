@@ -6,21 +6,20 @@ section#second-page {
             align-items: flex-end;
             width: 20%;
             transition: 0.7s width ease;
-
             &:nth-child(1) {
-                background-image: linear-gradient(transparent 65%, rgba(#000,.6)), url(../img/service-RDV.jpg);
+                background-image: linear-gradient(transparent 65%, rgba(#000, .6)), url(../img/service-RDV.jpg);
             }
             &:nth-child(2) {
-                background-image: linear-gradient(transparent 65%, rgba(#000,.6)), url(../img/service-annuaire.jpg);
+                background-image: linear-gradient(transparent 65%, rgba(#000, .6)), url(../img/service-annuaire.jpg);
             }
             &:nth-child(3) {
-                background-image: linear-gradient(transparent 65%, rgba(#000,.6)), url(../img/service-preadmission.jpg);
+                background-image: linear-gradient(transparent 65%, rgba(#000, .6)), url(../img/service-preadmission.jpg);
             }
             &:nth-child(4) {
-                background-image: linear-gradient(transparent 65%, rgba(#000,.6)), url(../img/service-paiement.jpg);
+                background-image: linear-gradient(transparent 65%, rgba(#000, .6)), url(../img/service-paiement.jpg);
             }
             &:nth-child(5) {
-                background-image: linear-gradient(transparent 65%, rgba(#000,.6)), url(../img/service-tele.jpg);
+                background-image: linear-gradient(transparent 65%, rgba(#000, .6)), url(../img/service-tele.jpg);
             }
             .panel-content {
                 position: relative;
@@ -31,13 +30,18 @@ section#second-page {
                 p {
                     color: #fff;
                 }
+                @include media-breakpoint-down(sm) {
+                    height: auto;
+                    padding-top: 3em;
+                    padding-bottom: 3em;
+                }
             }
             .panel-title {
                 line-height: $line-height-lg;
                 margin-bottom: 2em;
                 position: relative;
                 .title {
-                    @include ax_responsive(font-size, $font-size-base, $font-size-base, $font-size-lg, $font-size-xlg);
+                    @include responsive(font-size, $font-size-lg, $font-size-xlg, $font-size-xlg, $font-size-xlg);
                     margin: 0;
                     color: #fff;
                 }
@@ -51,9 +55,11 @@ section#second-page {
                 max-height: 0;
                 opacity: 0;
                 transition: .5s max-height ease, .5s opacity ease;
-                p {
-                    max-height: 80px;
-                    overflow: hidden;
+                @include media-breakpoint-up(md) {
+                    p {
+                        max-height: 80px;
+                        overflow: hidden;
+                    }
                 }
                 form {
                     padding-top: 1em;
@@ -66,57 +72,51 @@ section#second-page {
                         color: $gray-600;
                         margin-bottom: 1em;
                     }
-                    /* .w-picto {
-                        position: relative;
-                        &:before {
-                            content: "\eb33";
-                            font-family: $font-family-icomoon;
-                            speak: none;
-                            position: absolute;
-                            left: 5px;
-                            top: 50%;
-                            transform: translateY(-50%);
-                        }
-                    } */
+                }
+                @include media-breakpoint-down(sm) {
+                    max-height: initial;
+                    opacity: 1;
                 }
             }
-            &.panel-hovered {
-                width: 40%;
-                position: relative;
-                //cursor: pointer;
-                &:before {
-                    content: '';
-                    position: absolute;
-                    display: block;
-                    width: 100%;
-                    height: 100%;
-                    transition: width 0.4s ease;
-                    background-color: rgba($primary, .65);
-                    z-index: 2;
-                }
-                .panel-content {
-                    height: 375px;
-                }
-                .panel-title {
-                    &:after {
-                        opacity: 0;
-                        transition: .3s opacity ease;
-                    }
-                    &:after {
+            @include media-breakpoint-up(md) {
+                &.panel-hovered {
+                    width: 40%;
+                    position: relative;
+                    //cursor: pointer;
+                    &:before {
                         content: '';
                         position: absolute;
-                        bottom: -20px;
-                        left: 0;
-                        width: 30px;
-                        opacity: 1;
-                        height: 2px;
-                        background-color: #fff;
+                        display: block;
+                        width: 100%;
+                        height: 100%;
+                        transition: width 0.4s ease;
+                        background-color: rgba($primary, .65);
+                        z-index: 2;
                     }
-                }
-                .panel-content-added {
-                    width: 100%;
-                    max-height: 200px;
-                    opacity: 1;
+                    .panel-content {
+                        height: 375px;
+                    }
+                    .panel-title {
+                        &:after {
+                            opacity: 0;
+                            transition: .3s opacity ease;
+                        }
+                        &:after {
+                            content: '';
+                            position: absolute;
+                            bottom: -20px;
+                            left: 0;
+                            width: 30px;
+                            opacity: 1;
+                            height: 2px;
+                            background-color: #fff;
+                        }
+                    }
+                    .panel-content-added {
+                        width: 100%;
+                        max-height: 200px;
+                        opacity: 1;
+                    }
                 }
             }
         }
@@ -128,6 +128,29 @@ section#second-page {
         }
         .panel {
             width: 100%;
+            position: relative;
+            &:before {
+                content: '';
+                position: absolute;
+                display: block;
+                width: 100%;
+                height: 100%;
+                transition: width 0.4s ease;
+                background-color: rgba($primary, .65);
+                z-index: 2;
+            }
+            .panel-title {
+                &:after {
+                    content: '';
+                    position: absolute;
+                    bottom: -20px;
+                    left: 0;
+                    width: 30px;
+                    opacity: 1;
+                    height: 2px;
+                    background-color: #fff;
+                }
+            }
         }
     }
 }

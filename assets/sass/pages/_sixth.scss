@@ -124,4 +124,7 @@ section#sixth-page {
             }
         }
     }
+    @include media-breakpoint-down(sm) {
+        height: auto;
+    }
 }

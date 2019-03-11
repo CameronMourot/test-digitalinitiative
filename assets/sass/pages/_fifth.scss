@@ -1,6 +1,14 @@
 section#fifth-page {
     background: $primary url(../img/pro.jpg) no-repeat right;
     background-size: contain;
+    @include media-breakpoint-down(sm) {
+        background-image: linear-gradient(darken(rgba($primary, .65), 20%), rgba($primary, .65)), url(../img/pro.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        padding: 4em $grid-gutter-width/2;
+        height: auto;
+    }
     #background-pro {
         position: absolute;
         left: 0;
@@ -8,17 +16,19 @@ section#fifth-page {
         bottom: 0;
         width: 45vw;
         background-color: $primary;
-        &:after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 0;
-            right: calc(-90vw/4);
-            top: 0;
-            bottom: 0;
-            border-style: solid;
-            border-width: 100vh calc(90vw/4) 0 0;
-            border-color: $primary transparent transparent transparent;
+        @include media-breakpoint-up(md) {
+            &:after {
+                content: '';
+                position: absolute;
+                width: 0;
+                height: 0;
+                right: calc(-90vw/4);
+                top: 0;
+                bottom: 0;
+                border-style: solid;
+                border-width: 100vh calc(90vw/4) 0 0;
+                border-color: $primary transparent transparent transparent;
+            }
         }
     }
     #pro-content {
@@ -38,21 +48,31 @@ section#fifth-page {
             }
         }
         .title {
-            //@include ax_responsive(font-size, $h1-font-size, $h1-font-size, rem(56), rem(64));
-            font-size: rem(64);
+            @include responsive(font-size, $h1-font-size, $h1-font-size, rem(56), rem(64));
         }
         .baseline {
-            //@include ax_responsive(font-size, $font-size-xlg, $font-size-xlg, rem(34),);
-            font-size: rem(38);
+            @include responsive(font-size, $font-size-xlg, $font-size-xlg, rem(36), rem(38));
             font-family: $font-family-robotomedium;
             margin-bottom: 10px;
         }
         p {
             font-family: $font-family-robotolight;
             margin-bottom: 3em;
-            //@include ax_responsive(font-size, $font-size-sm, $font-size-base, rem(19), rem(21));
-            font-size: rem(21);
+            @include responsive(font-size, $font-size-base, $font-size-base, rem(19), rem(21));
             line-height: $line-height-lg;
+        }
+        @include media-breakpoint-down(sm) {
+            position: static;
+            >div {
+                width: auto;
+                padding-left: 0;
+            }
+            .baseline {
+                line-height: $line-height-medium;
+            }
+            p {
+                line-height: $line-height-base;
+            }
         }
     }
 }

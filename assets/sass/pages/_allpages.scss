@@ -1,6 +1,9 @@
 #main>section {
     &:not(:nth-child(-n+2)) {
         padding-top: $head-height;
+        @include media-breakpoint-down(sm) {
+            padding-top: 4em;
+        }
     }
     &#seventh-page {
         padding-top: 0;

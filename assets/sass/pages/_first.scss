@@ -1,4 +1,10 @@
 section#first-page {
+    @include media-breakpoint-down(sm) {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-image: linear-gradient(rgba(0, 0, 0, .25) 45%, $primary), url(../img/Section1-image1.jpg);
+    }
     >[class*="bg-"] {
         &:before {
             content: '';
@@ -21,7 +27,7 @@ section#first-page {
             color: #fff;
         }
         h1 {
-            @include ax_responsive(font-size, rem(35), rem(35), rem(43), rem(48));
+            @include responsive(font-size, rem(35), rem(35), rem(43), rem(48));
             line-height: $line-height-sm;
         }
         p {
@@ -39,20 +45,22 @@ section#first-page {
             background: url(../img/svg/myhealth-w.svg) no-repeat center;
             background-size: contain;
         }
-        .scroll-down-icon {
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 50px;
-            padding-bottom: 5em;
-            #animated-path {
-                animation: uppath 1s infinite alternate;
-            }
-            @keyframes uppath {
-                100% {
-                    transform: translateY(10px);
-                    opacity: .2;
+        @include media-breakpoint-up(md) {
+            .scroll-down-icon {
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 50px;
+                padding-bottom: 5em;
+                #animated-path {
+                    animation: uppath 1s infinite alternate;
+                }
+                @keyframes uppath {
+                    100% {
+                        transform: translateY(10px);
+                        opacity: .2;
+                    }
                 }
             }
         }

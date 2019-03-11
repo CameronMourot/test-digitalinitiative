@@ -4,8 +4,10 @@ section#third-page {
         [class*="col-"] {
             padding-top: 1em;
             padding-bottom: 1em;
-            &:nth-child(even) {
-                margin-top: 2em;
+            @include media-breakpoint-up(md) {
+                &:nth-child(even) {
+                    margin-top: 2em;
+                }
             }
         }
         .actu {
@@ -87,5 +89,29 @@ section#third-page {
     }
     @include media-breakpoint-down(sm) {
         height: auto;
+        #actu-wrapper {
+            padding-bottom: 4em;
+        }
+        #slider-wrapper {
+            .actu {
+                height: 325px;
+                &:before {
+                    content: '';
+                    position: absolute;
+                    display: block;
+                    top: 0;
+                    right: 0;
+                    left: 0;
+                    bottom: 0;
+                    background-image: linear-gradient(rgba(#000, .6), transparent 55%);
+                    z-index: 2;
+                }
+                .ribbon,
+                h3 {
+                    position: relative;
+                    z-index: 3;
+                }
+            }
+        }
     }
 }

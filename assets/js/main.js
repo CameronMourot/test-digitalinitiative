@@ -123,8 +123,22 @@ $(document).ready(function() {
         slidesToScroll: 1,
         arrows: false,
         dots: true,
+        adaptiveHeight: false,
         responsive: [{
             breakpoint: 992,
+            settings: "unslick"
+        }]
+    });
+
+    $('#nav-fourth').slick({
+        infinite: false,
+        mobileFirst: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        dots: true,
+        responsive: [{
+            breakpoint: 768,
             settings: "unslick"
         }]
     });

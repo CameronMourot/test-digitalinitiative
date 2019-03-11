@@ -1,5 +1,5 @@
 html {
-    @include ax_responsive(font-size, $font-size-base - 0.15rem, $font-size-base - 0.1rem, $font-size-base - 0.05rem, $font-size-base);
+    @include responsive(font-size, $font-size-base - 0.15rem, $font-size-base - 0.1rem, $font-size-base - 0.05rem, $font-size-base);
 }
 
 body {
@@ -41,9 +41,13 @@ body {
 }
 
 .big-title {
-    @include ax_responsive(font-size, $h1-font-size, $h1-font-size, 56px, 64px);
+    @include responsive(font-size, $h1-font-size, $h1-font-size, 56px, 64px);
     color: $primary;
     margin: .8em 0 .5em;
+    @include media-breakpoint-down(sm) {
+        margin: 0;
+        padding: 0 0 1em;
+    }
 }
 
 .btn {
