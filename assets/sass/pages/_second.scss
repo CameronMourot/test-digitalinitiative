@@ -25,7 +25,9 @@ section#second-page {
             .panel-content {
                 position: relative;
                 z-index: 3;
-                padding-bottom: 4em;
+                //padding-bottom: 4em;
+                height: 155px;
+                transition: .7s height ease;
                 p {
                     color: #fff;
                 }
@@ -91,6 +93,9 @@ section#second-page {
                     transition: width 0.4s ease;
                     background-color: rgba($primary, .65);
                     z-index: 2;
+                }
+                .panel-content {
+                    height: 375px;
                 }
                 .panel-title {
                     &:after {

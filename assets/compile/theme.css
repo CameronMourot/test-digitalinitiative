@@ -6501,7 +6501,8 @@ section#second-page #panel-wrapper {
     section#second-page #panel-wrapper .panel .panel-content {
       position: relative;
       z-index: 3;
-      padding-bottom: 4em; }
+      height: 155px;
+      transition: .7s height ease; }
       section#second-page #panel-wrapper .panel .panel-content p {
         color: #fff; }
     section#second-page #panel-wrapper .panel .panel-title {
@@ -6568,6 +6569,8 @@ section#second-page #panel-wrapper {
         transition: width 0.4s ease;
         background-color: rgba(0, 135, 145, 0.65);
         z-index: 2; }
+      section#second-page #panel-wrapper .panel.panel-hovered .panel-content {
+        height: 375px; }
       section#second-page #panel-wrapper .panel.panel-hovered .panel-title:after {
         opacity: 0;
         transition: .3s opacity ease; }
