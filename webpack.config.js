@@ -8,13 +8,13 @@ let configProd = {
     performance: { hints: false },
     entry: {
         main: [
-            './assets/js/scripts.js',
+            './assets/js/main.js',
             './assets/sass/main.scss'
         ]
     },
     output: {
         path: path.resolve(__dirname, './assets/compile'),
-        filename: 'scripts.js'
+        filename: 'theme.js'
     },
     module: {
         rules: [
