@@ -51,44 +51,35 @@ section#sixth-page {
                     border-width: 150px 170px 0 0;
                 }
             }
+            @include media-breakpoint-down(sm) {
+                .img {
+                    height: 240px;
+                }
+                .post-title {
+                    padding-bottom: 2em;
+                }
+            }
         }
         .row {
-            >div {
-                margin-bottom: $grid-gutter-width;
-            }
-            >div:nth-child(2) {
+            .post-one {
                 margin-top: 1em;
                 .img {
                     background-image: url(../img/followus-1.jpg);
                 }
             }
-            >div:nth-child(3) {
+            .post-two {
                 margin-top: 2em;
                 .img {
                     background-image: url(../img/followus-2.jpg);
                 }
             }
-            >div:nth-child(4) {
+            .post-three {
                 .img {
                     background-image: url(../img/followus-3.jpg);
                 }
             }
-            >div:nth-child(5) {
-                .img {
-                    background-image: url(../img/Section1-image3.jpg);
-                }
-            }
-            >div:nth-child(6) {
-                .img {
-                    background-image: url(../img/Section1-image2.jpg);
-                }
-            }
-            >div:nth-child(7) {
-                .img {
-                    background-image: url(../img/Section1-image1.jpg);
-                }
-            }
-            >div:nth-child(even) {
+            .post-one,
+            .post-three {
                 article {
                     &:before {
                         border-color: $facebook transparent transparent transparent;
@@ -105,7 +96,7 @@ section#sixth-page {
                     }
                 }
             }
-            >div:nth-child(odd) {
+            .post-two {
                 article {
                     &:before {
                         border-color: $twitter transparent transparent transparent;

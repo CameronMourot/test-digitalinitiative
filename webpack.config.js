@@ -9,6 +9,7 @@ let configProd = {
     performance: { hints: false },
     entry: {
         main: [
+            './assets/js/mobile.js',
             './assets/js/main.js',
             './assets/sass/main.scss'
         ]
@@ -18,8 +19,7 @@ let configProd = {
         filename: 'theme.js'
     },
     module: {
-        rules: [
-            {
+        rules: [{
                 test: /\.js/,
                 loader: 'babel-loader',
                 options: {
@@ -29,10 +29,10 @@ let configProd = {
             {
                 test: /\.scss$/,
                 use: [
-                    {loader: MiniCssExtractPlugin.loader},
-                    {loader: 'css-loader', options: {url: false}},
-                    {loader: 'postcss-loader'},
-                    {loader: 'sass-loader'}
+                    { loader: MiniCssExtractPlugin.loader },
+                    { loader: 'css-loader', options: { url: false } },
+                    { loader: 'postcss-loader' },
+                    { loader: 'sass-loader' }
                 ]
             }
         ]

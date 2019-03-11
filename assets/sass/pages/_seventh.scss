@@ -13,6 +13,12 @@ section#seventh-page {
                     fill: $primary;
                 }
             }
+            @include media-breakpoint-down(sm) {
+                svg {
+                    width: 222px;
+                    height: 58px;
+                }
+            }
         }
         .info-letter {
             input[type="text"] {
@@ -97,6 +103,16 @@ section#seventh-page {
             font-size: $font-size-lg;
             margin-bottom: 10px;
             display: block;
+        }
+        @include media-breakpoint-down(sm) {
+            padding: 4em 0 2em;
+            .info-letter,
+            .myhealth-networks {
+                margin-bottom: 3em;
+            }
+            .myhealth-links {
+                text-align: center;
+            }
         }
     }
     .second-part {

@@ -55,21 +55,6 @@ $(document).ready(function() {
         $("#burger").removeClass("burgeractive");
     });
 
-
-    // Panels second page
-    $(".panel").hover(function() {
-            $(this).addClass('panel-hovered');
-
-            //setTimeout(function() {
-            //  $('.panel-content-added').slideDown(400);
-            //}, 700)
-        },
-        function() {
-            $(this).removeClass('panel-hovered');
-            // $('.panel-content-added').slideUp(400);
-        });
-
-
     // Slider third page
     $('#slider-wrapper .row').slick({
         infinite: true,
@@ -83,18 +68,24 @@ $(document).ready(function() {
         }]
     });
 
-    // Masonry sixth page
-    var $grid = $('.gallery-wrapper').masonry({
-        itemSelector: '.grid-item',
-        columnWidth: '.grid-sizer',
-        horizontalOrder: true,
-        percentPosition: true,
-        transitionDuration: 0,
-    });
 
-    $grid.imagesLoaded().progress(function() {
-        $grid.masonry();
-    });
+
+    if ($(document).width() > 767) {
+
+        // Panels second page
+        $(".panel").hover(function() {
+                $(this).addClass('panel-hovered');
+
+                //setTimeout(function() {
+                //  $('.panel-content-added').slideDown(400);
+                //}, 700)
+            },
+            function() {
+                $(this).removeClass('panel-hovered');
+                // $('.panel-content-added').slideUp(400);
+            });
+
+    }
 
 
     // Hovering fourth page
