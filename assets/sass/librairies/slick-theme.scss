@@ -1,0 +1,70 @@
+.slick-arrow {
+    padding: 0;
+    margin: 0;
+    background: none;
+    //border: 0;
+    font-size: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 15;
+    width: 38px;
+    height: 38px;
+    border: 1px solid $gray-400;
+    &:active,
+    &:focus,
+    &:hover {
+        outline: none;
+        box-shadow: none;
+        cursor: pointer;
+    }
+    &:before {
+        content: '';
+        opacity: 1;
+        width: 30px;
+        height: 30px;
+        margin: 3px;
+        display: inline-block;
+    }
+    &.slick-next {
+        right: 0;
+        &:before {
+            background: url(../img/svg/swipe2-g.svg);
+        }
+    }
+    &.slick-prev {
+        left: 0;
+        &:before {
+            background: url(../img/svg/swipe1-g.svg);
+        }
+    }
+}
+
+.slick-dots {
+    bottom: 20px;
+    text-align: center;
+    li {
+        margin: 0 3px;
+        display: inline-block;
+        line-height: 20px;
+        button {
+            width: 12px;
+            height: 12px;
+            display: inline-block;
+            background: #fff;
+            opacity: 1;
+            font-size: 0;
+            outline: none;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 0 0 1px $gray-300;
+        }
+        &.slick-active,
+        &:hover {
+            button {
+                background: $orange;
+                box-shadow: 0 0 0 1px $orange;
+            }
+        }
+    }
+}

@@ -58,12 +58,15 @@ $(document).ready(function() {
     // Slider third page
     $('#slider-wrapper .row').slick({
         infinite: true,
+        arrows: true,
         slidesToShow: 2,
         slidesToScroll: 1,
         responsive: [{
             breakpoint: 767,
             settings: {
-                slidesToShow: 1
+                slidesToShow: 1,
+                arrows: false,
+                dots: true
             }
         }]
     });
