@@ -6,25 +6,26 @@ section#second-page {
             align-items: flex-end;
             width: 20%;
             transition: 0.7s width ease;
+
             &:nth-child(1) {
-                background-image: url(../img/service-RDV.jpg);
+                background-image: linear-gradient(transparent 65%, rgba(#000,.6)), url(../img/service-RDV.jpg);
             }
             &:nth-child(2) {
-                background-image: url(../img/service-annuaire.jpg);
+                background-image: linear-gradient(transparent 65%, rgba(#000,.6)), url(../img/service-annuaire.jpg);
             }
             &:nth-child(3) {
-                background-image: url(../img/service-preadmission.jpg);
+                background-image: linear-gradient(transparent 65%, rgba(#000,.6)), url(../img/service-preadmission.jpg);
             }
             &:nth-child(4) {
-                background-image: url(../img/service-paiement.jpg);
+                background-image: linear-gradient(transparent 65%, rgba(#000,.6)), url(../img/service-paiement.jpg);
             }
             &:nth-child(5) {
-                background-image: url(../img/service-tele.jpg);
+                background-image: linear-gradient(transparent 65%, rgba(#000,.6)), url(../img/service-tele.jpg);
             }
             .panel-content {
                 position: relative;
                 z-index: 3;
-                padding-bottom: 7em;
+                padding-bottom: 4em;
                 p {
                     color: #fff;
                 }
@@ -45,6 +46,13 @@ section#second-page {
                 }
             }
             .panel-content-added {
+                max-height: 0;
+                opacity: 0;
+                transition: .5s max-height ease, .5s opacity ease;
+                p {
+                    max-height: 80px;
+                    overflow: hidden;
+                }
                 form {
                     padding-top: 1em;
                     text-align: center;
@@ -86,14 +94,24 @@ section#second-page {
                 }
                 .panel-title {
                     &:after {
+                        opacity: 0;
+                        transition: .3s opacity ease;
+                    }
+                    &:after {
                         content: '';
                         position: absolute;
                         bottom: -20px;
                         left: 0;
                         width: 30px;
+                        opacity: 1;
                         height: 2px;
                         background-color: #fff;
                     }
+                }
+                .panel-content-added {
+                    width: 100%;
+                    max-height: 200px;
+                    opacity: 1;
                 }
             }
         }

@@ -28,7 +28,7 @@ section#fourth-page {
             .title {
                 font-size: rem(56);
                 line-height: $line-height-lg;
-                text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+                text-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
                 margin-bottom: 10px;
                 display: block;
             }
@@ -36,9 +36,14 @@ section#fourth-page {
                 font-size: rem(40);
                 font-family: $font-family-robotolight;
                 line-height: $line-height-lg;
-                text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+                text-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
             }
         }
+    }
+    .changing-content p {
+        max-height: 0;
+        opacity: 0;
+        transition: .5s max-height ease, .7s opacity ease;
     }
     [class*="hover-element"] {
         position: relative;
@@ -82,6 +87,30 @@ section#fourth-page {
         }
         .title {
             color: #fff;
+        }
+    }
+    &.bg-1 {
+        .changing-content {
+            p:nth-child(1) {
+                max-height: 200px;
+                opacity: 1;
+            }
+        }
+    }
+    &.bg-2 {
+        .changing-content {
+            p:nth-child(2) {
+                max-height: 200px;
+                opacity: 1;
+            }
+        }
+    }
+    &.bg-3 {
+        .changing-content {
+            p:nth-child(3) {
+                max-height: 200px;
+                opacity: 1;
+            }
         }
     }
 }
