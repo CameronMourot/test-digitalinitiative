@@ -2,6 +2,7 @@ const webpack = require('webpack');
 const path = require('path');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 
 let configProd = {
     mode: 'production',
@@ -48,6 +49,7 @@ let configProd = {
                 parallel: 4,
                 sourceMap: true,
             }),
+            new OptimizeCSSAssetsPlugin({})
         ]
     },
 };
