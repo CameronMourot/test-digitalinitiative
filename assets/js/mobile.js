@@ -5,7 +5,22 @@ $(document).ready(function() {
     if ($(document).width() < breakpoint) {
 
 
-        $('.gallery-wrapper').slick({
+        $('#panel-wrapper').slick({
+            infinite: false,
+            mobileFirst: true,
+            fade: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            dots: true,
+            adaptiveHeight: false,
+            responsive: [{
+                breakpoint: 768,
+                settings: "unslick"
+            }]
+        });
+
+        $('.gallery-wrapper, #nav-fourth').slick({
             infinite: false,
             mobileFirst: true,
             slidesToShow: 1,

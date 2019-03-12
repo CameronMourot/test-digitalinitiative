@@ -23,16 +23,17 @@ section#first-page {
         padding: 0 5em 8.5em;
         text-align: center;
         >h1,
-        p {
+        h2 {
             color: #fff;
         }
         h1 {
             @include responsive(font-size, rem(35), rem(35), rem(43), rem(48));
             line-height: $line-height-sm;
         }
-        p {
+        h2 {
             font-family: $font-family-robotolight;
             font-size: rem(36);
+            padding: 7px 0;
         }
         &:before {
             content: '';
@@ -66,10 +67,10 @@ section#first-page {
         }
         @include media-breakpoint-down(sm) {
             padding: 0 10px 7.5em;
-            .title {
+            .title, h2 {
                 line-height: $line-height-lg;
             }
-            p {
+            h2 {
                 font-size: rem(22);
             }
             .scroll-down-icon {
