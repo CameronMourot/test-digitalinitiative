@@ -4,6 +4,18 @@ $(document).ready(function() {
 
     if ($(document).width() < breakpoint) {
 
+        var direction = 0, scrollPosCurrent = 0;
+        $(document).on('scroll', function () {
+            scrollPosCurrent = $(window).scrollTop();
+            if (scrollPosCurrent > direction && scrollPosCurrent > 100) {
+                // downscroll code
+                $('#header-homepage').addClass('fixed');
+            } else {
+                // upscroll code
+                $('#header-homepage').removeClass('fixed');
+            }
+            direction = scrollPosCurrent;
+        });
 
         $('#panel-wrapper').slick({
             infinite: false,
