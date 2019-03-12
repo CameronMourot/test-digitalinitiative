@@ -109,7 +109,37 @@ section#third-page {
             }
         }
     }
-    @include media-breakpoint-down(sm) {
+    @include media-breakpoint-down(lg) {
+        .actu {
+            &:before {
+                content: '';
+                position: absolute;
+                display: block;
+                top: 0;
+                right: 0;
+                left: 0;
+                bottom: 0;
+                background-image: linear-gradient(rgba(#000, .6), transparent 55%);
+                z-index: 2;
+            }
+            .ribbon,
+            h3 {
+                position: relative;
+                z-index: 3;
+            }
+        }
+    }
+    @include media-breakpoint-only(lg) {
+        #slider-wrapper {
+            padding: 0 7em;
+            margin-bottom: 5em;
+            margin-top: 5em;
+            .actu {
+                height: 360px;
+            }
+        }
+    }
+    @include media-breakpoint-down(md) {
         height: auto;
         #actu-wrapper {
             padding-bottom: 4em;
@@ -117,22 +147,6 @@ section#third-page {
         #slider-wrapper {
             .actu {
                 height: 325px;
-                &:before {
-                    content: '';
-                    position: absolute;
-                    display: block;
-                    top: 0;
-                    right: 0;
-                    left: 0;
-                    bottom: 0;
-                    background-image: linear-gradient(rgba(#000, .6), transparent 55%);
-                    z-index: 2;
-                }
-                .ribbon,
-                h3 {
-                    position: relative;
-                    z-index: 3;
-                }
             }
             .slick-dots {
                 margin-bottom: 25px;

@@ -30,7 +30,7 @@ section#second-page {
                 p {
                     color: #fff;
                 }
-                @include media-breakpoint-down(sm) {
+                @include media-breakpoint-down(md) {
                     height: auto;
                     padding-top: 3em;
                     padding-bottom: 5.5em;
@@ -73,12 +73,12 @@ section#second-page {
                         margin-bottom: 1em;
                     }
                 }
-                @include media-breakpoint-down(sm) {
+                @include media-breakpoint-down(md) {
                     max-height: initial;
                     opacity: 1;
                 }
             }
-            @include media-breakpoint-up(md) {
+            @include media-breakpoint-up(lg) {
                 &.panel-hovered {
                     width: 40%;
                     position: relative;
@@ -120,7 +120,7 @@ section#second-page {
                 }
             }
         }
-        @include media-breakpoint-down(sm) {
+        @include media-breakpoint-down(md) {
             .slick-dots {
                 position: absolute;
                 left: 50%;
@@ -132,7 +132,7 @@ section#second-page {
             }
         }
     }
-    @include media-breakpoint-down(sm) {
+    @include media-breakpoint-down(md) {
         height: auto;
         #panel-wrapper {
             height: auto;

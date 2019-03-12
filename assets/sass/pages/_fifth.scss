@@ -1,7 +1,11 @@
 section#fifth-page {
     background: $primary url(../img/pro.jpg) no-repeat right;
     background-size: contain;
-    @include media-breakpoint-down(sm) {
+    @media (min-width: 992px) and (max-width: 1470px) {
+        background-position: left;
+        background-size: cover;
+    }
+    @include media-breakpoint-down(md) {
         background-image: linear-gradient(darken(rgba($primary, .65), 20%), rgba($primary, .65)), url(../img/pro.jpg);
         background-repeat: no-repeat;
         background-position: center;
@@ -16,7 +20,7 @@ section#fifth-page {
         bottom: 0;
         width: 45vw;
         background-color: $primary;
-        @include media-breakpoint-up(md) {
+        @include media-breakpoint-up(lg) {
             &:after {
                 content: '';
                 position: absolute;
@@ -61,7 +65,12 @@ section#fifth-page {
             @include responsive(font-size, $font-size-base, $font-size-base, rem(19), rem(21));
             line-height: $line-height-lg;
         }
-        @include media-breakpoint-down(sm) {
+        @include media-breakpoint-only(lg) {
+            .baseline {
+                line-height: $line-height-medium;
+            }
+        }
+        @include media-breakpoint-down(md) {
             position: static;
             >div {
                 width: auto;

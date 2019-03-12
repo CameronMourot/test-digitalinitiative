@@ -33,7 +33,7 @@ $(document).ready(function() {
             }]
         });
 
-        $('.gallery-wrapper, #nav-fourth').slick({
+        $('.gallery-wrapper').slick({
             infinite: false,
             mobileFirst: true,
             slidesToShow: 1,
@@ -41,7 +41,31 @@ $(document).ready(function() {
             arrows: false,
             dots: true,
             responsive: [{
-                breakpoint: 992,
+                    breakpoint: 992,
+                    settings: "unslick"
+                },
+                {
+                    breakpoint: 767,
+                    settings: {
+                        infinite: true,
+                        slidesToShow: 2,
+                        autoplay: false,
+                        arrows: false,
+                        dots: true
+                    }
+                }
+            ]
+        });
+
+        $('#nav-fourth').slick({
+            infinite: false,
+            mobileFirst: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            dots: true,
+            responsive: [{
+                breakpoint: 767,
                 settings: "unslick"
             }]
         });

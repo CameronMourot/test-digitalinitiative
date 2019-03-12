@@ -1,4 +1,5 @@
 $head-height: 96px;
+$head-height-md: 65px;
 #header-homepage {
     background-color: transparent;
     position: absolute;
@@ -118,6 +119,10 @@ $head-height: 96px;
         background-color: $secondary;
         color: #fff;
         transition: 0.3s background-color ease;
+        @include media-breakpoint-only(md) {
+            height: $head-height-md;
+            line-height: $head-height-md;
+        }
     }
 }
 

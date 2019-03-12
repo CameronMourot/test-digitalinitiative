@@ -44,7 +44,7 @@ body {
     @include responsive(font-size, $h1-font-size, $h1-font-size, 56px, 64px);
     color: $primary;
     margin: .8em 0 .5em;
-    @include media-breakpoint-down(sm) {
+    @include media-breakpoint-down(md) {
         margin: 0;
         padding: 0 0 1em;
     }

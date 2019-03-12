@@ -1,4 +1,7 @@
 section#fourth-page {
+    @include media-breakpoint-only(md) {
+        max-height: 900px;
+    }
     @include media-breakpoint-down(sm) {
         max-height: 600px;
     }
@@ -42,7 +45,12 @@ section#fourth-page {
                 text-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
             }
         }
-        @include media-breakpoint-down(sm) {
+        @include media-breakpoint-only(lg) {
+            >div:nth-child(1) {
+                width: 75vw;
+            }
+        }
+        @include media-breakpoint-down(md) {
             top: 0;
             padding: 4em $grid-gutter-width/2;
             >div:nth-child(1) {
@@ -94,6 +102,13 @@ section#fourth-page {
         }
         .btn {
             margin-top: 12px;
+        }
+        @include media-breakpoint-only(md) {
+            padding: 1.5em 1em;
+            .title {
+                font-size: $font-size-base;
+                font-family: $font-family-robotoregular;
+            }
         }
     }
     &.bg-1 .hover-element-one,

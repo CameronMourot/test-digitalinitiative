@@ -36,19 +36,31 @@ $(document).ready(function() {
     // Slider third page
     $('#slider-wrapper .row').slick({
         infinite: true,
+        autoplay: 5500,
         arrows: true,
         prevArrow: '<span class="icon-arrow-left slick-prev"></span>',
         nextArrow: '<span class="icon-arrow-right slick-next"></span>',
         slidesToShow: 2,
         slidesToScroll: 1,
         responsive: [{
-            breakpoint: 767,
-            settings: {
-                slidesToShow: 1,
-                arrows: false,
-                dots: true
+                breakpoint: 991,
+                settings: {
+                    slidesToShow: 2,
+                    autoplay: false,
+                    arrows: false,
+                    dots: true,
+                }
+            },
+            {
+                breakpoint: 767,
+                settings: {
+                    slidesToShow: 1,
+                    autoplay: false,
+                    arrows: false,
+                    dots: true
+                }
             }
-        }]
+        ]
     });
 
     $('#contain-menu-items a').on('click', function() {
@@ -77,6 +89,17 @@ $(document).ready(function() {
                 $(this).removeClass('panel-hovered');
             });
     }
+
+    if ($(document).width() > 992) {
+        // Panels second page
+        $(".panel").hover(function() {
+                $(this).addClass('panel-hovered');
+            },
+            function() {
+                $(this).removeClass('panel-hovered');
+            });
+    }
+
 
     // Hovering fourth page
     var $fourth = $('#fourth-page');
