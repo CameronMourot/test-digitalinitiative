@@ -67,7 +67,8 @@ section#first-page {
         }
         @include media-breakpoint-down(sm) {
             padding: 0 10px 7.5em;
-            .title, h2 {
+            .title,
+            h2 {
                 line-height: $line-height-lg;
             }
             h2 {
@@ -101,9 +102,11 @@ section#first-page {
                 content: "\eac5";
             }
         }
-        &:hover {
-            text-decoration: none;
-            bottom: 22px;
+        @include media-breakpoint-up(md) {
+            &:hover {
+                text-decoration: none;
+                bottom: 22px;
+            }
         }
     }
 }

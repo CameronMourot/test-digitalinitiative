@@ -1,4 +1,7 @@
 section#fourth-page {
+    @include media-breakpoint-down(sm) {
+        max-height: 600px;
+    }
     >[class*="bg-"] {
         &:before {
             content: '';
@@ -45,6 +48,13 @@ section#fourth-page {
             >div:nth-child(1) {
                 width: auto;
                 position: relative;
+            }
+            .slick-dots {
+                margin-top: 20px;
+                li.slick-active button {
+                    background: $primary;
+                    box-shadow: 0 0 0 1px $primary;
+                }
             }
         }
     }

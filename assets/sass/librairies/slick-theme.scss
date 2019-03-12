@@ -10,7 +10,6 @@
     z-index: 15;
     width: 38px;
     height: 38px;
-    border: 1px solid $gray-400;
     &:active,
     &:focus,
     &:hover {
@@ -27,16 +26,10 @@
         display: inline-block;
     }
     &.slick-next {
-        right: 0;
-        &:before {
-            background: url(../img/svg/swipe2-g.svg);
-        }
+        right: -65px;
     }
     &.slick-prev {
-        left: 0;
-        &:before {
-            background: url(../img/svg/swipe1-g.svg);
-        }
+        left: -65px;
     }
 }
 

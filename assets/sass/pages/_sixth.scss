@@ -117,5 +117,19 @@ section#sixth-page {
     }
     @include media-breakpoint-down(sm) {
         height: auto;
+        #followus-wrapper {
+            padding-bottom: 3em;
+            .slick-dots {
+                margin-top: 20px;
+                li button {
+                    background: transparent;
+                    box-shadow: 0 0 0 1px $gray-500;
+                }
+                li.slick-active button {
+                    background: $primary;
+                    box-shadow: 0 0 0 1px $primary;
+                }
+            }
+        }
     }
 }

@@ -12,7 +12,7 @@ $(document).ready(function() {
         updateURL: true,
         loop: false,
         keyboard: true,
-        responsiveFallback: 768,
+        responsiveFallback: 992,
         direction: "vertical"
     });
 
@@ -49,6 +49,10 @@ $(document).ready(function() {
                 dots: true
             }
         }]
+    });
+
+    $('#contain-menu-items a').on('click', function() {
+        $overlay.hide(300);
     });
 
 

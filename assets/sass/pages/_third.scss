@@ -1,6 +1,7 @@
 section#third-page {
     background-color: $gray-bg;
     #slider-wrapper {
+        margin-bottom: 3em;
         [class*="col-"] {
             padding-top: 1em;
             padding-bottom: 1em;
@@ -8,6 +9,27 @@ section#third-page {
                 &:nth-child(even) {
                     margin-top: 2em;
                 }
+            }
+        }
+        .icon-arrow-left,
+        .icon-arrow-right {
+            font-family: $font-family-icomoon;
+            color: $primary;
+            font-size: $font-size-xlg;
+            background: #fff;
+            width: 50px;
+            height: 50px;
+            border-radius: 100px;
+            line-height: 47px;
+        }
+        .icon-arrow-left {
+            &:before {
+                content: "\edc1";
+            }
+        }
+        .icon-arrow-right {
+            &:before {
+                content: "\edb9";
             }
         }
         .actu {
@@ -110,6 +132,18 @@ section#third-page {
                 h3 {
                     position: relative;
                     z-index: 3;
+                }
+            }
+            .slick-dots {
+                margin-bottom: 25px;
+                margin-top: 10px;
+                li button {
+                    background: transparent;
+                    box-shadow: 0 0 0 1px $gray-500;
+                }
+                li.slick-active button {
+                    background: $primary;
+                    box-shadow: 0 0 0 1px $primary;
                 }
             }
         }

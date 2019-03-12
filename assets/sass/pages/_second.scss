@@ -33,7 +33,7 @@ section#second-page {
                 @include media-breakpoint-down(sm) {
                     height: auto;
                     padding-top: 3em;
-                    padding-bottom: 3em;
+                    padding-bottom: 5.5em;
                 }
             }
             .panel-title {
@@ -117,6 +117,17 @@ section#second-page {
                         max-height: 200px;
                         opacity: 1;
                     }
+                }
+            }
+        }
+        @include media-breakpoint-down(sm) {
+            .slick-dots {
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                li.slick-active button {
+                    background: darken($primary, 15%);
+                    box-shadow: 0 0 0 1px darken($primary, 15%);
                 }
             }
         }

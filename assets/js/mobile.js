@@ -1,11 +1,12 @@
 $(document).ready(function() {
 
-    let breakpoint = 768;
+    let breakpoint = 992;
 
     if ($(document).width() < breakpoint) {
 
-        var direction = 0, scrollPosCurrent = 0;
-        $(document).on('scroll', function () {
+        var direction = 0,
+            scrollPosCurrent = 0;
+        $(document).on('scroll', function() {
             scrollPosCurrent = $(window).scrollTop();
             if (scrollPosCurrent > direction && scrollPosCurrent > 100) {
                 // downscroll code
@@ -27,7 +28,7 @@ $(document).ready(function() {
             dots: true,
             adaptiveHeight: false,
             responsive: [{
-                breakpoint: 768,
+                breakpoint: 992,
                 settings: "unslick"
             }]
         });
@@ -40,7 +41,7 @@ $(document).ready(function() {
             arrows: false,
             dots: true,
             responsive: [{
-                breakpoint: 768,
+                breakpoint: 992,
                 settings: "unslick"
             }]
         });

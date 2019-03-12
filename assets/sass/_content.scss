@@ -143,4 +143,17 @@ body {
             }
         }
     }
+    >div:last-child {
+        margin-top: 1em;
+        display: block;
+        position: relative;
+        &:before {
+            content: '-';
+            position: absolute;
+            left: 50%;
+            top: -1em;
+            transform: translateX(-50%);
+            color: #fff;
+        }
+    }
 }
