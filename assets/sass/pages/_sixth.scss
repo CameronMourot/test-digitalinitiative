@@ -115,11 +115,6 @@ section#sixth-page {
             }
         }
     }
-    @include media-breakpoint-only(md) {
-        .slick-track {
-            margin-bottom: 2em;
-        }
-    }
     @include media-breakpoint-down(md) {
         height: auto;
         #followus-wrapper {
@@ -135,6 +130,9 @@ section#sixth-page {
                     box-shadow: 0 0 0 1px $primary;
                 }
             }
+        }
+        .slick-track {
+            margin-bottom: 2em;
         }
     }
 }
