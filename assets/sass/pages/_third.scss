@@ -129,6 +129,12 @@ section#third-page {
             }
         }
     }
+    @media (min-width: 2000px) {
+        #slider-wrapper {
+            margin-bottom: 7em;
+            margin-top: 7em;
+        }
+    }
     @include media-breakpoint-only(lg) {
         #slider-wrapper {
             padding: 0 7em;

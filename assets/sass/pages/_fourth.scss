@@ -65,6 +65,23 @@ section#fourth-page {
                 }
             }
         }
+        @include media-breakpoint-up(lg) {
+            .monaco {
+                background-color: $secondary;
+                position: absolute;
+                top: 0;
+                left: 50%;
+                opacity: 0;
+                padding: 0 6px;
+                transition: .3s opacity ease;
+                transform: translateX(-50%);
+                span {
+                    color: #fff;
+                    font-size: .9rem;
+                    text-transform: uppercase;
+                }
+            }
+        }
     }
     .changing-content p {
         max-height: 0;
@@ -100,9 +117,17 @@ section#fourth-page {
             color: $primary;
             transition: .3s color ease;
         }
+
         .btn {
             margin-top: 12px;
+            @include media-breakpoint-up(lg) {
+                font-size: 0;
+                padding: 0;
+                border: 0;
+                transition: .3s font-size ease, .3s padding ease, .3s ease border;
+            }
         }
+
         @include media-breakpoint-only(md) {
             padding: 1.5em 1em;
             .title {
@@ -120,6 +145,13 @@ section#fourth-page {
         }
         .title {
             color: #fff;
+        }
+        @include media-breakpoint-up(lg) {
+            .btn {
+                font-size: $font-size-base;
+                padding: .375rem .75rem;
+                border: 1px solid #fff;
+            }
         }
     }
     &.bg-1 {
@@ -143,6 +175,11 @@ section#fourth-page {
             p:nth-child(3) {
                 max-height: 200px;
                 opacity: 1;
+            }
+        }
+        @include media-breakpoint-up(lg) {
+            .monaco {
+                opacity: 1!important;
             }
         }
     }

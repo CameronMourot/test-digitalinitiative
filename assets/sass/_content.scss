@@ -105,7 +105,7 @@ body {
         &:after {
             background-color: #fff;
         }
-        @include media-breakpoint-down(sm) {
+        @include media-breakpoint-down(md) {
             top: 21px;
         }
     }

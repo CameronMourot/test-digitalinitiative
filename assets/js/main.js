@@ -122,4 +122,4 @@ $(document).ready(function() {
 
 
 });
-console.log('working-js');
+// console.log('Working js');

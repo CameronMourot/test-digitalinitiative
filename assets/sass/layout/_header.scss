@@ -6,15 +6,22 @@ $head-height-md: 65px;
     top: 0;
     right: 0;
     left: 0;
+    @include media-breakpoint-down(md) {
+        position: fixed;
+        z-index: 99;
+        background-color: $primary;
+    }
     .brand {
         svg {
             width: 189px;
             height: 34px;
             transition: 0.3s transform ease;
         }
-        &:hover {
-            svg {
-                transform: translateX(3px);
+        @include media-breakpoint-up(lg) {
+            &:hover {
+                svg {
+                    transform: translateX(3px);
+                }
             }
         }
     }
@@ -200,12 +207,13 @@ $head-height-md: 65px;
     }
     .menu-burger {
         position: relative;
+        padding-left: 1.5rem;
         &:before {
             content: 'MENU';
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
-            left: 35px;
+            left: 60px;
             color: #000;
             font-size: $font-size-lg;
         }
